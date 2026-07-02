@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Digital - Desenvolvimento de Apps Web</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="ph-fill ph-code"></i> No Digital
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Abrir menu">
+                <i class="ph-bold ph-list"></i>
+            </button>
+
+            <div class="nav-overlay"></div>
+            
+            <div class="nav-menu">
+                <div class="nav-menu-header">
+                    <span class="logo"><i class="ph-fill ph-code"></i> No Digital</span>
+                    <button class="close-menu-btn" aria-label="Fechar menu">
+                        <i class="ph-bold ph-x"></i>
+                    </button>
+                </div>
+                <nav class="nav-links">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                    <a href="#servicos" class="nav-link">Serviços</a>
+                    <a href="#processo" class="nav-link">Processo</a>
+                    <a href="#contato" class="nav-link">Contato</a>
+                </nav>
+                <div class="nav-actions">
+                    <button class="btn btn-primary">Fazer Orçamento <i class="ph-bold ph-arrow-up-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-glow"></div>
+        <div class="container hero-container">
+            <div class="hero-content reveal reveal-left">
+                <div><i class="ph-bold ph-sparkle"></i> Especialistas em Web Apps</div>
+                <h1>Desenvolvimento de <span>Sistemas SaaS e Web Apps</span></h1>
+
+
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large">Iniciar Projeto <i class="ph-bold ph-arrow-up-right"></i></button>
+                    <button class="btn btn-outline btn-large">Ver Portfólio</button>
+                </div>
+            </div>
+            <div class="hero-image reveal reveal-right reveal-delay-2">
+                <div class="css-illustration-wrapper">
+
+                    <!-- Desktop Browser Window -->
+                    <div class="illus-browser">
+                        <div class="browser-topbar">
+                            <div class="browser-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <div class="browser-url">
+                                <i class="ph-bold ph-lock-simple"></i>
+                                <span>app.nodigital.com.br</span>
+                            </div>
+                        </div>
+                        <div class="browser-body">
+                            <div class="dash-sidebar">
+                                <div class="dash-logo-icon"><i class="ph-bold ph-code"></i></div>
+                                <div class="sidebar-item active"><span class="sidebar-dot"></span></div>
+                                <div class="sidebar-item"><span class="sidebar-dot"></span></div>
+                                <div class="sidebar-item"><span class="sidebar-dot"></span></div>
+                                <div class="sidebar-item"><span class="sidebar-dot"></span></div>
+                            </div>
+                            <div class="dash-main">
+                                <div class="dash-topbar-row">
+                                    <div class="dash-greeting">
+                                        <div class="text-line w80"></div>
+                                        <div class="text-line w50 light"></div>
+                                    </div>
+                                    <div class="dash-avatar"></div>
+                                </div>
+                                <div class="dash-stats-row">
+                                    <div class="stat-card">
+                                        <div class="stat-icon"><i class="ph-bold ph-users"></i></div>
+                                        <div class="stat-info">
+                                            <div class="text-line w60 light"></div>
+                                            <div class="stat-value">2.4k</div>
+                                        </div>
+                                    </div>
+                                    <div class="stat-card accent">
+                                        <div class="stat-icon"><i class="ph-bold ph-chart-line-up"></i></div>
+                                        <div class="stat-info">
+                                            <div class="text-line w60 light"></div>
+                                            <div class="stat-value">+38%</div>
+                                        </div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="stat-icon"><i class="ph-bold ph-rocket-launch"></i></div>
+                                        <div class="stat-info">
+                                            <div class="text-line w60 light"></div>
+                                            <div class="stat-value">128</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dash-chart-area">
+                                    <svg class="chart-svg" viewBox="0 0 300 80" preserveAspectRatio="none">
+                                        <defs>
+                                            <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="0%" stop-color="rgba(139,92,246,0.4)"/>
+                                                <stop offset="100%" stop-color="rgba(139,92,246,0)"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <path d="M0,70 Q30,60 60,50 T120,35 T180,25 T240,15 T300,5 L300,80 L0,80 Z" fill="url(#chartGrad)"/>
+                                        <path d="M0,70 Q30,60 60,50 T120,35 T180,25 T240,15 T300,5" fill="none" stroke="#8B5CF6" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Phone -->
+                    <div class="illus-phone">
+                        <div class="phone-notch"></div>
+                        <div class="phone-body">
+                            <div class="phone-status-bar">
+                                <span>9:41</span>
+                                <div class="phone-status-icons">
+                                    <i class="ph-bold ph-wifi-high"></i>
+                                    <i class="ph-bold ph-battery-full"></i>
+                                </div>
+                            </div>
+                            <div class="phone-app-header">
+                                <div class="text-line w50"></div>
+                            </div>
+                            <div class="phone-card">
+                                <div class="phone-card-icon"><i class="ph-bold ph-lightning"></i></div>
+                                <div class="text-line w80 light"></div>
+                                <div class="phone-progress"><div class="phone-progress-fill"></div></div>
+                            </div>
+                            <div class="phone-card">
+                                <div class="phone-card-icon green"><i class="ph-bold ph-check-circle"></i></div>
+                                <div class="text-line w60 light"></div>
+                                <div class="phone-progress full"><div class="phone-progress-fill"></div></div>
+                            </div>
+                            <div class="phone-bottom-nav">
+                                <i class="ph-bold ph-house"></i>
+                                <i class="ph-bold ph-chart-pie-slice"></i>
+                                <i class="ph-bold ph-bell"></i>
+                                <i class="ph-bold ph-user"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Code Snippet -->
+                    <div class="illus-code-snippet">
+                        <div class="code-line"><span class="code-purple">const</span> <span class="code-blue">app</span> = <span class="code-yellow">createApp</span>();</div>
+                        <div class="code-line"><span class="code-purple">await</span> app.<span class="code-yellow">deploy</span>(<span class="code-green">'prod'</span>);</div>
+                        <div class="code-line"><span class="code-comment">// 🚀 deployed!</span></div>
+                    </div>
+
+                    <!-- Orbiting Particles -->
+                    <div class="particle p1"></div>
+                    <div class="particle p2"></div>
+                    <div class="particle p3"></div>
+
+                    <!-- Glow Effects -->
+                    <div class="css-glow-1"></div>
+                    <div class="css-glow-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about">
+        <div class="container about-container">
+            <div class="about-image reveal reveal-left">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="Equipe No Digital">
+            </div>
+            <div class="about-content reveal reveal-right reveal-delay-2">
+                <div class="eyebrow"><i class="ph-bold ph-info"></i> Sobre Nós</div>
+                <h2>Somos uma Startup de desenvolvimento</h2>
+                <p>Transformamos ideias em produtos digitais que geram impacto real. Desenvolvemos aplicações web modernas, intuitivas e escaláveis, ajudando empresas a inovar, crescer e se destacar em um mercado cada vez mais digital.</p>
+                <p>Mais do que desenvolver software, construímos experiências digitais que conectam pessoas, simplificam processos e impulsionam resultados.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="services">
+        <div class="container">
+            <div class="section-header text-center reveal reveal-up">
+                <div class="eyebrow"><i class="ph-bold ph-gear"></i> Nossos Serviços</div>
+                <h2>Soluções Web Completas para o seu Negócio</h2>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card reveal reveal-up reveal-delay-1">
+                    <div class="service-icon"><i class="ph-bold ph-browsers"></i></div>
+                    <h3>Sistemas Web Customizados</h3>
+                    <p>Desenvolvimento de plataformas robustas feitas sob medida para as necessidades específicas da sua operação.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card reveal reveal-up reveal-delay-2">
+                    <div class="service-icon"><i class="ph-bold ph-device-mobile"></i></div>
+                    <h3>Progressive Web Apps (PWA)</h3>
+                    <p>Aplicativos web que oferecem a mesma experiência rápida e fluida de um app nativo para celular.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card reveal reveal-up reveal-delay-3">
+                    <div class="service-icon"><i class="ph-bold ph-plugs"></i></div>
+                    <h3>Integração de APIs</h3>
+                    <p>Conectamos seus sistemas a ferramentas de terceiros para automação e melhoria de processos.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card reveal reveal-up reveal-delay-4">
+                    <div class="service-icon"><i class="ph-bold ph-cloud-arrow-up"></i></div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Hospedagem e arquitetura em nuvem (AWS, Azure) garantindo máxima segurança e escalabilidade.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card reveal reveal-up reveal-delay-5">
+                    <div class="service-icon"><i class="ph-bold ph-shield-check"></i></div>
+                    <h3>Segurança Web</h3>
+                    <p>Proteção de dados, auditorias de segurança e conformidade para manter suas aplicações sempre protegidas e blindadas.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card reveal reveal-up reveal-delay-6">
+                    <div class="service-icon"><i class="ph-bold ph-bezier-curve"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Criação de interfaces intuitivas e funcionais focadas na experiência do usuário e alta taxa de conversão.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="processo" class="process">
+        <div class="container">
+            <div class="section-header text-center reveal reveal-up">
+                <div class="eyebrow"><i class="ph-bold ph-git-merge"></i> Como Funciona</div>
+                <h2>O Caminho para Soluções Perfeitas</h2>
+            </div>
+            <div class="process-grid">
+                <div class="process-card reveal reveal-up reveal-delay-1">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="Discovery">
+                    <div class="process-content">
+                        <h3>1. Descoberta & Consultoria</h3>
+                        <p>Iniciamos com uma imersão profunda no seu negócio para entender os desafios e objetivos.</p>
+                    </div>
+                </div>
+                <div class="process-card reveal reveal-up reveal-delay-2">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" alt="Design">
+                    <div class="process-content">
+                        <h3>2. Design UI/UX Customizado</h3>
+                        <p>Criamos protótipos focados na experiência do usuário para validar as ideias antes do código.</p>
+                    </div>
+                </div>
+                <div class="process-card reveal reveal-up reveal-delay-3">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Desenvolvimento">
+                    <div class="process-content">
+                        <h3>3. Desenvolvimento e Integração</h3>
+                        <p>Nosso time de engenheiros escreve um código limpo, escalável e de alta performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand reveal reveal-up reveal-delay-1">
+                <a href="#" class="logo">
+                    <i class="ph-fill ph-code"></i> No Digital
+                </a>
+                <p>Especialistas na criação de soluções e aplicativos web focados em escalabilidade e inovação tecnológica.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph-fill ph-linkedin-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-links reveal reveal-up reveal-delay-2">
+                <h4>Serviços</h4>
+                <a href="#">Desenvolvimento Web</a>
+                <a href="#">Sistemas SaaS</a>
+                <a href="#">Consultoria Cloud</a>
+                <a href="#">UI/UX Design</a>
+            </div>
+            <div class="footer-contact reveal reveal-up reveal-delay-3">
+                <h4>Contato</h4>
+                <p><i class="ph-bold ph-envelope"></i> contato@nodigital.com</p>
+                <p><i class="ph-bold ph-phone"></i> +55 11 99999-9999</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 No Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SmoothScroll for Websites (mesmo usado pelo plugin WordPress) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>
