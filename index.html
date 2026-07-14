@@ -34,15 +34,15 @@
       <nav class="nav" id="mainNav" aria-label="Navegação principal">
         <ul class="nav__list">
           <li><a href="#services" class="nav__link">Serviços</a></li>
-          <li><a href="#work" class="nav__link">Portfólio</a></li>
           <li><a href="#about" class="nav__link">Sobre Nós</a></li>
+          <li><a href="#work" class="nav__link">Portfólio</a></li>
           <li><a href="#blog" class="nav__link">Blog</a></li>
         </ul>
       </nav>
 
       <!-- CTA -->
-      <a href="#contact" class="btn-cta header__cta" id="headerCta">
-        Começar um Projeto
+      <a href="javascript:void(0)" class="btn-cta header__cta" id="headerCta">
+        Entrar em contato
         <span class="btn-cta__arrow">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </span>
@@ -281,6 +281,38 @@
       </div>
     </section>
 
+    <!-- ========== ABOUT PROJECT ========== -->
+    <section class="about-project fade-in" id="about">
+      <div class="container about-project__inner">
+        <div class="about-project__image-container">
+          <div class="about-project__image-wrapper">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Foto profissional representando a liderança do projeto Nodigital" class="about-project__img" />
+          </div>
+          <div class="about-project__badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            Inclusão Digital
+          </div>
+        </div>
+        
+        <div class="about-project__content">
+          <h2 class="about-project__title">Sobre a <span class="gradient-text">Nodigital</span></h2>
+          <h3 class="about-project__subtitle">Tecnologia acessível, design humano e inovação contínua.</h3>
+          
+          <p class="about-project__desc">
+            A <strong>Nodigital</strong> nasceu de uma inquietação: a tecnologia de ponta não deve ser um privilégio exclusivo de gigantes corporativos. Criamos nossa startup de desenvolvimento nocode e lowcode com a missão de democratizar a transformação digital para pequenas e médias empresas, oferecendo soluções web e mobile com excelente experiência do usuário, criado para negócios que buscam crescer sem perder a essência.
+          </p>
+          <p class="about-project__desc">
+            Acreditamos que cada projeto deve ser escrito pensando em quem vai utilizá-lo. É por isso que unimos engenharia de software escalável com um design centrado no usuário, garantindo uma verdadeira inclusão digital. Transformamos ideias complexas em experiências incrivelmente simples, eficientes e de alto impacto para você e para o seu cliente.
+          </p>
+          
+          <div class="about-project__founder">
+            <h4 class="about-project__founder-name">Fundador / André Lima</h4>
+            <span class="about-project__founder-role">CEO & Desenvolvedor</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== PORTFOLIO ========== -->
     <section class="portfolio fade-in" id="work">
       <div class="container">
@@ -465,30 +497,151 @@
   </main>
 
   <!-- ========== FOOTER ========== -->
-  <footer class="footer" id="footer">
-    <div class="container footer__inner">
+  <footer class="footer-modern" id="footer">
+    <div class="container">
+      <div class="footer-modern__top">
+        
+        <!-- Brand Column -->
+        <div class="footer-modern__brand">
+          <a href="#" class="logo footer-logo" aria-label="nodigital home">
+            <div class="logo__icon">
+              <!-- Ícone da logo na cor branca -->
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20c5.5 0 10.45-2.22 14.07-5.82C41.35 34.92 42 30.12 42 24c0-4-2-9.5-5-13C33.5 7 29 4 24 4z" fill="#FFFFFF"/>
+                <text x="24" y="30" text-anchor="middle" font-family="Poppins, sans-serif" font-size="16" font-weight="800" fill="#0B1B33">&lt;/&gt;</text>
+              </svg>
+            </div>
+            <div class="logo__text">
+              <span class="logo__name" style="color: #FFFFFF;">nodigital</span>
+            </div>
+          </a>
+          <p class="footer-modern__desc">Transformando ideias em experiências digitais de alto impacto, escaláveis e focadas no usuário.</p>
+          <div class="footer-modern__socials">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+            <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+          </div>
+        </div>
 
-      <a href="mailto:devenshivay@gmail.com" class="footer__item">
-        <span class="footer__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="4" width="20" height="16" rx="2"/>
-            <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-          </svg>
-        </span>
-        devenshivay@gmail.com
-      </a>
+        <!-- Links Column 1 -->
+        <div class="footer-modern__links">
+          <h4 class="footer-modern__title">Empresa</h4>
+          <ul>
+            <li><a href="#about">Sobre nós</a></li>
+            <li><a href="#services">Nossos Serviços</a></li>
+            <li><a href="#work">Portfólio de Projetos</a></li>
+            <li><a href="javascript:void(0)" id="footerCta">Fale com a gente</a></li>
+          </ul>
+        </div>
 
-      <a href="tel:+919636888871" class="footer__item">
-        <span class="footer__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-        </span>
-        +91 9636888871
-      </a>
+        <!-- Links Column 2 -->
+        <div class="footer-modern__links">
+          <h4 class="footer-modern__title">Recursos</h4>
+          <ul>
+            <li><a href="#">Área para Designers</a></li>
+            <li><a href="#">Dicas e Tutoriais</a></li>
+            <li><a href="#">Blog Nodigital</a></li>
+            <li><a href="#">Cases de Sucesso</a></li>
+          </ul>
+        </div>
 
+        <!-- Contact Column -->
+        <div class="footer-modern__contact">
+          <h4 class="footer-modern__title">Contato Direto</h4>
+          <a href="mailto:contato@nodigital.com.br" class="footer-modern__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            contato@nodigital.com.br
+          </a>
+          <a href="tel:+5511983641085" class="footer-modern__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            (11) 98364-1085
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-modern__bottom">
+        <p>&copy; 2026 Nodigital. Todos os direitos reservados.</p>
+        <div class="footer-modern__legal">
+          <a href="#">Termos de Uso</a>
+          <a href="#">Política de Privacidade</a>
+        </div>
+      </div>
     </div>
   </footer>
+
+  <!-- ========== CONTACT MODAL ========== -->
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal-content modal-content--split">
+      <button class="modal-close" id="closeModalBtn" aria-label="Fechar">&times;</button>
+      
+      <div class="modal-pane-left">
+        <div class="modal-pane-left__content">
+          <h2 class="modal-title-light">Pronto para inovar?</h2>
+          <p class="modal-desc-light">Conte-nos sobre a sua ideia e nós ajudaremos a transformá-la em uma poderosa experiência digital.</p>
+          <div class="modal-contact-info">
+            <div class="modal-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>contato@nodigital.com.br</span>
+            </div>
+            <div class="modal-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>(11) 98364-1085</span>
+            </div>
+          </div>
+        </div>
+        <!-- Decorative blob -->
+        <div class="modal-blob"></div>
+      </div>
+
+      <div class="modal-pane-right">
+        <h2 class="modal-title">Fale Conosco</h2>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <!-- Web3Forms Config -->
+          <!-- Substitua o valor abaixo pela chave que você receberá no seu e-mail -->
+          <input type="hidden" name="access_key" value="c1331b29-1485-4f7b-b92b-98cedb35f73b">
+          <input type="hidden" name="subject" value="Novo contato pelo site!">
+          <input type="hidden" name="from_name" value="Site Nodigital">
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">NOME *</label>
+              <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+            </div>
+            <div class="form-group">
+              <label for="telefone">TELEFONE *</label>
+              <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">E-MAIL</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com">
+          </div>
+          <div class="form-group">
+            <label for="mensagem">MENSAGEM</label>
+            <textarea id="mensagem" name="mensagem" rows="3" placeholder="Como podemos ajudar?"></textarea>
+          </div>
+          <button type="submit" class="btn-primary modal-submit">Enviar Mensagem</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== SUCCESS MODAL ========== -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-content success-content">
+      <button class="modal-close" id="closeSuccessBtn" aria-label="Fechar">&times;</button>
+      <div class="success-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+      </div>
+      <h2 class="modal-title text-center">Mensagem Enviada!</h2>
+      <p class="modal-desc text-center">Recebemos o seu contato e retornaremos o mais breve possível.</p>
+      <button class="btn-primary success-btn" id="successOkBtn">Entendido</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

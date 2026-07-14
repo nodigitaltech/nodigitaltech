@@ -141,4 +141,92 @@ document.addEventListener('DOMContentLoaded', () => {
       hlObserver.observe(item);
     });
   }
+
+  // ── Modal Logic ──
+  const headerCta = document.getElementById('headerCta');
+  const footerCta = document.getElementById('footerCta');
+  const contactModal = document.getElementById('contactModal');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+
+  if (contactModal) {
+    const openModal = (e) => {
+      e.preventDefault();
+      contactModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    };
+
+    if (headerCta) headerCta.addEventListener('click', openModal);
+    if (footerCta) footerCta.addEventListener('click', openModal);
+
+    closeModalBtn.addEventListener('click', () => {
+      contactModal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    contactModal.addEventListener('click', (e) => {
+      if (e.target === contactModal) {
+        contactModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  // ── Contact Form AJAX Submission ──
+  const contactForm = document.querySelector('.contact-form');
+  const successModal = document.getElementById('successModal');
+  const closeSuccessBtns = [document.getElementById('closeSuccessBtn'), document.getElementById('successOkBtn')];
+
+  if (contactForm && successModal) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault(); // Impede o redirecionamento
+      
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.innerHTML = 'Enviando...';
+      submitBtn.disabled = true;
+
+      const formData = new FormData(contactForm);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      })
+      .then(async (response) => {
+        if (response.ok) {
+          // Sucesso: Limpa o formulário, fecha o modal de contato e abre o modal de sucesso
+          contactForm.reset();
+          if (contactModal) contactModal.classList.remove('active');
+          document.body.style.overflow = 'hidden'; 
+          successModal.classList.add('active');
+        } else {
+          const data = await response.json();
+          alert(data.message || 'Ocorreu um erro ao enviar a mensagem. Tente novamente.');
+        }
+      })
+      .catch(error => {
+        alert('Ocorreu um erro de conexão ao enviar a mensagem. Tente novamente.');
+      })
+      .finally(() => {
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+      });
+    });
+
+    // Handle Success Modal Close
+    closeSuccessBtns.forEach(btn => {
+      if (btn) {
+        btn.addEventListener('click', () => {
+          successModal.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      }
+    });
+
+    successModal.addEventListener('click', (e) => {
+      if (e.target === successModal) {
+        successModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
 });
