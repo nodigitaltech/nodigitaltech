@@ -1008,6 +1008,18 @@ body::after {
   overflow: hidden;
 }
 
+.portfolio-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition);
+}
+
+.portfolio-card:hover .portfolio-card__img {
+  transform: scale(1.05);
+}
+
 .portfolio-card__placeholder {
   width: 100%;
   height: 100%;
@@ -1993,4 +2005,282 @@ body::after {
   margin-top: 16px;
   padding: 14px;
 }
+
+/* ============================================
+   WHATSAPP BUTTON
+   ============================================ */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse-wa 2s infinite;
+}
+
+.whatsapp-btn svg {
+  width: 35px;
+  height: 35px;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+  animation: none;
+}
+
+@keyframes pulse-wa {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .whatsapp-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  .whatsapp-btn svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* ============================================
+   CONTACT FINAL SECTION
+   ============================================ */
+.contact-final {
+  padding: 100px 0;
+  background: var(--clr-gray-100);
+}
+
+.contact-final__card {
+  max-width: 1060px;
+  margin: 0 auto;
+  background: var(--clr-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--clr-gray-200);
+  overflow: hidden;
+}
+
+/* Split layout */
+.contact-final__split {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+}
+
+/* --- Illustration side --- */
+.contact-final__illus {
+  background: linear-gradient(150deg, var(--clr-gray-100) 0%, var(--clr-gray-200) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 32px;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-final__illus::before {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  background: rgba(108, 79, 246, 0.06);
+  border-radius: 50%;
+}
+
+.contact-final__illus-img {
+  width: 100%;
+  max-width: 280px;
+  object-fit: contain;
+  flex: 1;
+}
+
+.contact-final__illus-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.contact-final__info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--clr-gray-text);
+}
+
+.contact-final__info-item svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--clr-primary);
+}
+
+/* --- Form side --- */
+.contact-final__form-side {
+  padding: 40px 44px;
+}
+
+.contact-final__submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 4px;
+  padding: 14px;
+}
+
+.contact-final__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.contact-final__links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--clr-gray-300);
+  font-size: 0.82rem;
+}
+
+.contact-final__link {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--clr-gray-text);
+  transition: color var(--transition);
+}
+
+.contact-final__link:hover {
+  color: var(--clr-primary);
+}
+
+@media (max-width: 900px) {
+  .contact-final__split {
+    grid-template-columns: 1fr;
+  }
+  .contact-final__illus {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 28px 24px;
+    gap: 20px;
+  }
+  .contact-final__illus-img {
+    max-width: 120px;
+    flex: none;
+  }
+  .contact-final__illus-info {
+    width: auto;
+    flex: 1;
+  }
+  .contact-final__form-side {
+    padding: 28px 24px;
+  }
+  .contact-final__submit {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ---- Premium Numbered Fields (pf-*) ---- */
+.pf-field {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+/* Step number badge */
+.pf-num {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--clr-primary);
+  opacity: 0.55;
+  line-height: 1;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+.pf-field:focus-within .pf-num {
+  opacity: 1;
+}
+
+/* Label */
+.pf-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--clr-gray-light);
+  margin-bottom: 6px;
+  transition: color var(--transition);
+}
+
+.pf-field:focus-within .pf-label {
+  color: var(--clr-primary);
+}
+
+/* Input */
+.pf-input {
+  width: 100%;
+  padding: 11px 16px;
+  font-size: 0.95rem;
+  font-family: var(--ff);
+  color: var(--clr-dark);
+  background: var(--clr-gray-100);
+  border: 1.5px solid var(--clr-gray-200);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
+  resize: none;
+}
+
+.pf-input::placeholder {
+  color: var(--clr-gray-light);
+  font-size: 0.9rem;
+}
+
+.pf-input:focus {
+  background: var(--clr-white);
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 0 3px rgba(108, 79, 246, 0.1), inset 3px 0 0 var(--clr-primary);
+}
+
+.pf-textarea {
+  min-height: 120px;
+}
+
+
+
+
+
 

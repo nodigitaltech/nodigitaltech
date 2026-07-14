@@ -172,43 +172,47 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ── Contact Form AJAX Submission ──
-  const contactForm = document.querySelector('.contact-form');
+  const contactForms = document.querySelectorAll('.contact-form');
   const successModal = document.getElementById('successModal');
   const closeSuccessBtns = [document.getElementById('closeSuccessBtn'), document.getElementById('successOkBtn')];
 
-  if (contactForm && successModal) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault(); // Impede o redirecionamento
-      
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalBtnText = submitBtn.innerHTML;
-      submitBtn.innerHTML = 'Enviando...';
-      submitBtn.disabled = true;
+  if (contactForms.length && successModal) {
+    contactForms.forEach(form => {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Impede o redirecionamento
+        
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.innerHTML = 'Enviando...';
+        submitBtn.disabled = true;
 
-      const formData = new FormData(contactForm);
+        const formData = new FormData(form);
 
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData
-      })
-      .then(async (response) => {
-        if (response.ok) {
-          // Sucesso: Limpa o formulário, fecha o modal de contato e abre o modal de sucesso
-          contactForm.reset();
-          if (contactModal) contactModal.classList.remove('active');
-          document.body.style.overflow = 'hidden'; 
-          successModal.classList.add('active');
-        } else {
-          const data = await response.json();
-          alert(data.message || 'Ocorreu um erro ao enviar a mensagem. Tente novamente.');
-        }
-      })
-      .catch(error => {
-        alert('Ocorreu um erro de conexão ao enviar a mensagem. Tente novamente.');
-      })
-      .finally(() => {
-        submitBtn.innerHTML = originalBtnText;
-        submitBtn.disabled = false;
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        })
+        .then(async (response) => {
+          if (response.ok) {
+            // Sucesso: Limpa o formulário, fecha o modal de contato (se estiver aberto) e abre o modal de sucesso
+            form.reset();
+            if (contactModal && contactModal.classList.contains('active')) {
+              contactModal.classList.remove('active');
+            }
+            document.body.style.overflow = 'hidden'; 
+            successModal.classList.add('active');
+          } else {
+            const data = await response.json();
+            alert(data.message || 'Ocorreu um erro ao enviar a mensagem. Tente novamente.');
+          }
+        })
+        .catch(error => {
+          alert('Ocorreu um erro de conexão ao enviar a mensagem. Tente novamente.');
+        })
+        .finally(() => {
+          submitBtn.innerHTML = originalBtnText;
+          submitBtn.disabled = false;
+        });
       });
     });
 
