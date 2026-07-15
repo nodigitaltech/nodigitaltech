@@ -26,6 +26,9 @@
   <meta name="twitter:image" content="https://nodigital.com.br/assets/images/og-image.png" />
   <meta name="twitter:image:alt" content="nodigital — Transformando Ideias em Experiência Digital" />
 
+  <!-- ===== Preload Hero Image (LCP optimization) ===== -->
+  <link rel="preload" as="image" href="assets/images/hero-illustration-560.png" imagesrcset="assets/images/hero-illustration-400.png 400w, assets/images/hero-illustration-560.png 560w, assets/images/hero-illustration.png 1024w" imagesizes="(max-width: 768px) 400px, 560px" fetchpriority="high" />
+
   <link rel="stylesheet" href="styles.css?v=2.2" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
 </head>
@@ -116,7 +119,17 @@
         <!-- Right Column — Illustration -->
         <div class="hero__illustration fade-in">
           <div class="hero__illustration-wrapper">
-            <img src="assets/images/hero-illustration.png" alt="Ilustração 3D de um notebook com um foguete decolando, representando transformação e inovação digital" class="hero__img" />
+            <img 
+              src="assets/images/hero-illustration-560.png" 
+              srcset="assets/images/hero-illustration-400.png 400w, assets/images/hero-illustration-560.png 560w, assets/images/hero-illustration.png 1024w" 
+              sizes="(max-width: 768px) 400px, 560px" 
+              alt="Ilustração 3D de um notebook com um foguete decolando, representando transformação e inovação digital" 
+              class="hero__img" 
+              width="560" 
+              height="560" 
+              fetchpriority="high" 
+              decoding="async" 
+            />
 
             <!-- Badge -->
             <div class="hero__badge">
