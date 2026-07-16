@@ -6,37 +6,56 @@ document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   // ── DOM Refs ──
-  const header     = document.getElementById('header');
-  const hamburger  = document.getElementById('hamburger');
-  const mainNav    = document.getElementById('mainNav');
-  const overlay    = document.getElementById('navOverlay');
-  const navLinks   = document.querySelectorAll('.nav__link');
-  const fadeEls    = document.querySelectorAll('.fade-in');
+  const header      = document.getElementById('header');
+  const hamburger   = document.getElementById('hamburger');
+  const mainNav     = document.getElementById('mainNav');
+  const overlay     = document.getElementById('navOverlay');
+  const mobileDrawer = document.getElementById('mobileDrawer');
+  const drawerClose = document.getElementById('drawerClose');
+  const drawerCta   = document.getElementById('drawerCta');
+  const drawerLinks = document.querySelectorAll('.mobile-drawer__link');
+  const navLinks    = document.querySelectorAll('.nav__link');
+  const fadeEls     = document.querySelectorAll('.fade-in');
 
   // ── Mobile Menu Toggle ──
-  function toggleMenu(forceClose) {
-    const shouldClose = forceClose === true || mainNav.classList.contains('open');
-
-    mainNav.classList.toggle('open', !shouldClose);
+  function toggleDrawer(forceClose) {
+    const isOpen = mobileDrawer.classList.contains('open');
+    const shouldClose = forceClose === true || isOpen;
+    mobileDrawer.classList.toggle('open', !shouldClose);
     overlay.classList.toggle('active', !shouldClose);
     hamburger.classList.toggle('active', !shouldClose);
     hamburger.setAttribute('aria-expanded', String(!shouldClose));
     document.body.style.overflow = shouldClose ? '' : 'hidden';
   }
 
-  hamburger.addEventListener('click', () => toggleMenu());
-  overlay.addEventListener('click', () => toggleMenu(true));
+  hamburger.addEventListener('click', () => toggleDrawer());
+  drawerClose.addEventListener('click', () => toggleDrawer(true));
+  overlay.addEventListener('click', () => toggleDrawer(true));
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (mainNav.classList.contains('open')) toggleMenu(true);
-    });
+  // Close drawer when clicking a nav link
+  drawerLinks.forEach(link => {
+    link.addEventListener('click', () => toggleDrawer(true));
   });
+
+  // Drawer CTA opens contact modal
+  if (drawerCta) {
+    drawerCta.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleDrawer(true);
+      const contactModal = document.getElementById('contactModal');
+      if (contactModal) {
+        setTimeout(() => {
+          contactModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }, 300);
+      }
+    });
+  }
 
   // Close on Escape
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && mainNav.classList.contains('open')) {
-      toggleMenu(true);
+    if (e.key === 'Escape' && mobileDrawer.classList.contains('open')) {
+      toggleDrawer(true);
     }
   });
 
