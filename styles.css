@@ -1607,6 +1607,11 @@ body::after {
   }
 
   /* Portfolio */
+  .portfolio {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .portfolio__grid {
     grid-template-columns: 1fr;
     gap: 24px;
