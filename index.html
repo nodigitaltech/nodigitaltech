@@ -3,878 +3,1055 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>nodigital — Transformando Ideias em Experiência Digital</title>
-  <meta name="description" content="Criamos soluções de software escaláveis e de alta performance que impulsionam o crescimento, engajam usuários e geram impacto real. Web, Mobile, Desktop e Design UX/UI." />
+  <title>Nodigital Tech</title>
+  <meta name="description" content="Serviços Gerenciados de TI (MSP) de alta performance: Proxmox VE, OPNSense, Windows & Linux Server, Backup Imutável, Cibersegurança e Desenvolvimento de Sistemas com IA." />
+  <meta name="keywords" content="MSP, Soluções de TI, Proxmox, OPNSense, Firewall, Windows Server, Linux Server, Cibersegurança, Suporte de TI, Desenvolvimento com IA, Nodigital" />
 
-  <!-- ===== Open Graph / Facebook / WhatsApp ===== -->
+  <!-- Open Graph / Meta Social -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nodigital.com.br/" />
-  <meta property="og:title" content="nodigital — Transformando Ideias em Experiência Digital" />
-  <meta property="og:description" content="Criamos soluções de software escaláveis e de alta performance que impulsionam o crescimento, engajam usuários e geram impacto real. Web, Mobile, Desktop e Design UX/UI." />
-  <meta property="og:image" content="https://nodigital.com.br/assets/images/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="nodigital — Transformando Ideias em Experiência Digital" />
+  <meta property="og:title" content="Nodigital | Soluções de TI, Infraestrutura MSP e IA" />
+  <meta property="og:description" content="Gestão completa de TI para sua empresa: servidores, virtualização Proxmox, firewall OPNSense, segurança avançada e automações com IA." />
   <meta property="og:locale" content="pt_BR" />
-  <meta property="og:site_name" content="nodigital" />
+  <meta property="og:site_name" content="Nodigital" />
 
-  <!-- ===== Twitter Card ===== -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://nodigital.com.br/" />
-  <meta name="twitter:title" content="nodigital — Transformando Ideias em Experiência Digital" />
-  <meta name="twitter:description" content="Criamos soluções de software escaláveis e de alta performance que impulsionam o crescimento, engajam usuários e geram impacto real. Web, Mobile, Desktop e Design UX/UI." />
-  <meta name="twitter:image" content="https://nodigital.com.br/assets/images/og-image.png" />
-  <meta name="twitter:image:alt" content="nodigital — Transformando Ideias em Experiência Digital" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
 
-  <!-- ===== Preload Hero Image (LCP optimization) ===== -->
-  <link rel="preload" as="image" href="assets/images/hero-illustration-560.png" imagesrcset="assets/images/hero-illustration-400.png 400w, assets/images/hero-illustration-560.png 560w, assets/images/hero-illustration.png 1024w" imagesizes="(max-width: 768px) 400px, 560px" fetchpriority="high" />
-
-  <link rel="stylesheet" href="styles.css?v=2.2" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ========== OVERLAY (Mobile Nav) ========== -->
-  <div class="nav-overlay" id="navOverlay"></div>
-
-  <!-- ========== MOBILE DRAWER ========== -->
-  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Menu mobile">
-    <!-- Drawer Header -->
-    <div class="mobile-drawer__header">
-      <a href="#" class="logo mobile-drawer__logo" aria-label="nodigital home">
-        <div class="logo__icon">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20c5.5 0 10.45-2.22 14.07-5.82C41.35 34.92 42 30.12 42 24c0-4-2-9.5-5-13C33.5 7 29 4 24 4z" fill="#0B1B33"/>
-            <text x="24" y="30" text-anchor="middle" font-family="Poppins, sans-serif" font-size="16" font-weight="800" fill="white">&lt;/&gt;</text>
-          </svg>
-        </div>
-        <div class="logo__text">
-          <span class="logo__name">nodigital</span>
-        </div>
-      </a>
-      <button class="mobile-drawer__close" id="drawerClose" aria-label="Fechar menu">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-    </div>
-
-    <!-- Drawer Navigation -->
-    <nav class="mobile-drawer__nav" aria-label="Navegação mobile">
-      <ul class="mobile-drawer__list">
-        <li class="mobile-drawer__item">
-          <a href="#services" class="mobile-drawer__link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-            Serviços
-          </a>
-        </li>
-        <li class="mobile-drawer__item">
-          <a href="#about" class="mobile-drawer__link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            Sobre Nós
-          </a>
-        </li>
-        <li class="mobile-drawer__item">
-          <a href="#work" class="mobile-drawer__link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-            Portfólio
-          </a>
-        </li>
-        <li class="mobile-drawer__item">
-          <a href="#testimonials" class="mobile-drawer__link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-            Depoimentos
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Drawer CTA -->
-    <div class="mobile-drawer__cta">
-      <a href="javascript:void(0)" class="btn-cta mobile-drawer__cta-btn" id="drawerCta">
-        Entrar em contato
-        <span class="btn-cta__arrow">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
+  <!-- ==========================================================================
+       TOP ANNOUNCEMENT BAR (Estilo Microsoft)
+       ========================================================================== -->
+  <div class="ms-topbar">
+    <div class="ms-container ms-topbar__content">
+      <span>Descubra as vulnerabilidades e oportunidades de redução de custo na TI da sua empresa.</span>
+      <a href="#contato" class="ms-topbar__link open-contact-modal">
+        Agendar análise &gt;
       </a>
     </div>
+  </div>
 
-    <!-- Drawer Footer -->
-    <div class="mobile-drawer__footer">
-      <div class="mobile-drawer__contact">
-        <a href="mailto:contato@nodigital.com.br" class="mobile-drawer__contact-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          contato@nodigital.com.br
+  <!-- ==========================================================================
+       HEADER & NAVIGATION (Estilo Microsoft Fluent Navbar)
+       ========================================================================== -->
+  <header class="ms-header" id="header">
+    <div class="ms-container ms-header__nav">
+      
+      <!-- Brand Logo + Nav Links lado a lado -->
+      <div class="ms-header__left">
+        <!-- Brand Logo -->
+        <a href="#" class="ms-brand" aria-label="Nodigital Início">
+          <img src="assets/img/logo.png" alt="Nodigital Logo" class="ms-brand__img" width="44" height="44" />
+          <span class="ms-brand__text">Nodigital</span>
+          <span class="ms-brand__tag">MSP TECH</span>
         </a>
-        <a href="tel:+5511983641085" class="mobile-drawer__contact-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          (11) 98364-1085
-        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="ms-nav" aria-label="Navegação Principal">
+          <ul class="ms-nav__list">
+            <li class="ms-nav__item">
+              <a href="#solucoes" class="ms-nav__link">
+                Soluções MSP
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <!-- Menu suspenso simples (apenas texto) -->
+              <div class="ms-simple-dropdown">
+                <a href="#solucoes" class="ms-simple-dropdown__link">Virtualização Proxmox VE</a>
+                <a href="#solucoes" class="ms-simple-dropdown__link">Firewall OPNSense & UTM</a>
+                <a href="#solucoes" class="ms-simple-dropdown__link">Windows & Linux Server</a>
+                <a href="#solucoes" class="ms-simple-dropdown__link">Backup Imutável 3-2-1</a>
+                <a href="#diferenciais" class="ms-simple-dropdown__link">Gestão de TI & NOC 24/7</a>
+              </div>
+            </li>
+
+            <li class="ms-nav__item">
+              <a href="#ia-dev" class="ms-nav__link">
+                Desenvolvimento
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <!-- Menu suspenso simples de Desenvolvimento -->
+              <div class="ms-simple-dropdown">
+                <a href="#ia-dev" class="ms-simple-dropdown__link">Web Apps</a>
+                <a href="#ia-dev" class="ms-simple-dropdown__link">Sistemas Internos</a>
+                <a href="#ia-dev" class="ms-simple-dropdown__link">Website Institucional</a>
+                <a href="#ia-dev" class="ms-simple-dropdown__link">Catálogos e portais web</a>
+              </div>
+            </li>
+
+            <li class="ms-nav__item">
+              <a href="#ia-dev" class="ms-nav__link">IA</a>
+            </li>
+
+            <li class="ms-nav__item">
+              <a href="#diferenciais" class="ms-nav__link">Segurança</a>
+            </li>
+
+            <li class="ms-nav__item">
+              <a href="#segmentos" class="ms-nav__link">
+                Institucional
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <!-- Menu suspenso simples de Institucional -->
+              <div class="ms-simple-dropdown">
+                <a href="#diferenciais" class="ms-simple-dropdown__link">Nossa Equipe</a>
+                <a href="#segmentos" class="ms-simple-dropdown__link">Visão</a>
+                <a href="#diferenciais" class="ms-simple-dropdown__link">Cases de Sucesso</a>
+                <a href="#diferenciais" class="ms-simple-dropdown__link">Empresas Parceiras</a>
+                <a href="#contato" class="ms-simple-dropdown__link open-contact-modal">Download</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <div class="mobile-drawer__socials">
-        <a href="#" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+
+      <!-- Nav Actions (Right) -->
+      <div class="ms-nav__actions">
+        <a href="#calculadora" class="ms-btn ms-btn--ghost ms-btn--sm">
+          Portal do Cliente
         </a>
-        <a href="#" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+
+        <a href="#contato" class="ms-btn ms-btn--primary ms-btn--sm open-contact-modal">
+          Falar com Especialista
         </a>
-        <a href="https://wa.me/5511983641085" aria-label="WhatsApp" target="_blank">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button class="ms-menu-btn" aria-label="Abrir menu de navegação">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
       </div>
-    </div>
-  </aside>
-
-  <!-- ========== HEADER ========== -->
-  <header class="header" id="header">
-    <div class="container header__inner">
-
-      <!-- Logo -->
-      <a href="#" class="logo" aria-label="nodigital home">
-        <div class="logo__icon">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20c5.5 0 10.45-2.22 14.07-5.82C41.35 34.92 42 30.12 42 24c0-4-2-9.5-5-13C33.5 7 29 4 24 4z" fill="#0B1B33"/>
-            <text x="24" y="30" text-anchor="middle" font-family="Poppins, sans-serif" font-size="16" font-weight="800" fill="white">&lt;/&gt;</text>
-          </svg>
-        </div>
-        <div class="logo__text">
-          <span class="logo__name">nodigital</span>
-        </div>
-      </a>
-
-      <!-- Navigation (Desktop) -->
-      <nav class="nav" id="mainNav" aria-label="Navegação principal">
-        <ul class="nav__list">
-          <li><a href="#services" class="nav__link">Serviços</a></li>
-          <li><a href="#about" class="nav__link">Sobre Nós</a></li>
-          <li><a href="#work" class="nav__link">Portfólio</a></li>
-          <li><a href="#testimonials" class="nav__link">Depoimentos</a></li>
-        </ul>
-      </nav>
-
-      <!-- CTA -->
-      <a href="javascript:void(0)" class="btn-cta header__cta" id="headerCta">
-        Entrar em contato
-        <span class="btn-cta__arrow">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
-      </a>
-
-      <!-- Hamburger -->
-      <button class="hamburger" id="hamburger" aria-label="Alternar menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
     </div>
   </header>
 
-  <main>
-
-    <!-- ========== HERO ========== -->
-    <section class="hero" id="hero">
-      <div class="container hero__inner">
-
-        <!-- Left Column -->
-        <div class="hero__content fade-in">
-          <p class="hero__label">APLICATIVOS <span>•</span> WEBSITES <span>•</span> SISTEMAS</p>
-
-          <h1 class="hero__title">
-            Transformando<br />
-            Ideias em<br />
-            <span class="gradient-text">Experiência<br />Digital</span>
-          </h1>
-
-          <span class="hero__squiggle">
-            <svg viewBox="0 0 80 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 10C12 2 20 14 30 8C40 2 48 14 58 8C68 2 72 10 78 6" stroke="#6C4FF6" stroke-width="2.5" stroke-linecap="round"/>
-            </svg>
-          </span>
-
-          <p class="hero__desc">
-            Criamos soluções de software escaláveis e de alta performance que impulsionam o crescimento, engajam usuários e geram impacto real.
-          </p>
-
-          <div class="hero__actions">
-            <a href="#work" class="btn-primary">
-              Explorar Nosso Trabalho
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
+  <!-- Mobile Drawer -->
+  <div class="ms-mobile-drawer" id="mobile-drawer">
+    <div class="ms-mobile-drawer__content">
+      <div class="ms-mobile-drawer__header">
+        <div class="ms-brand">
+          <img src="assets/img/logo.png" alt="Nodigital Logo" class="ms-brand__img" width="44" height="44" />
+          <span class="ms-brand__text">Nodigital</span>
         </div>
-
-        <!-- Right Column — Illustration -->
-        <div class="hero__illustration fade-in">
-          <div class="hero__illustration-wrapper">
-            <img 
-              src="assets/images/hero-illustration-560.png" 
-              srcset="assets/images/hero-illustration-400.png 400w, assets/images/hero-illustration-560.png 560w, assets/images/hero-illustration.png 1024w" 
-              sizes="(max-width: 768px) 400px, 560px" 
-              alt="Ilustração 3D de um notebook com um foguete decolando, representando transformação e inovação digital" 
-              class="hero__img" 
-              width="560" 
-              height="560" 
-              fetchpriority="high" 
-              decoding="async" 
-            />
-
-            <!-- Badge -->
-            <div class="hero__badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              Criamos<br />Soluções de<br />Impacto
-            </div>
-
-            <!-- Decorative shapes -->
-            <div class="hero__deco hero__deco--diamond"></div>
-            <div class="hero__deco hero__deco--circle"></div>
-            <div class="hero__deco hero__deco--dots"></div>
-          </div>
-        </div>
-
+        <button class="ms-drawer-close" style="background:none;border:none;font-size:1.5rem;cursor:pointer;">&times;</button>
       </div>
-    </section>
-
-    <!-- ========== HIGHLIGHTS ========== -->
-    <section class="highlights fade-in" id="highlights" aria-label="Destaques principais">
-      <div class="highlights__card">
-
-        <!-- 1 – Scalable Solutions -->
-        <div class="highlight">
-          <div class="highlight__icon highlight__icon--blue">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
-              <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
-              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 3 0 3 0"/>
-              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-3 0-3"/>
-            </svg>
-          </div>
-          <h3 class="highlight__title">Soluções Escaláveis</h3>
-          <p class="highlight__desc">Feitas para crescer com o seu negócio sem esforço.</p>
-        </div>
-
-        <!-- 2 – High Performance -->
-        <div class="highlight">
-          <div class="highlight__icon highlight__icon--purple">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              <path d="M9 12l2 2 4-4"/>
-            </svg>
-          </div>
-          <h3 class="highlight__title">Alta Performance</h3>
-          <p class="highlight__desc">Otimizado para velocidade, segurança e confiabilidade.</p>
-        </div>
-
-        <!-- 3 – User-Centric -->
-        <div class="highlight">
-          <div class="highlight__icon highlight__icon--orange">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <h3 class="highlight__title">Foco no Usuário</h3>
-          <p class="highlight__desc">Projetado para experiências fluidas e encantadoras.</p>
-        </div>
-
-        <!-- 4 – End-to-End Support -->
-        <div class="highlight">
-          <div class="highlight__icon highlight__icon--royal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
-              <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
-            </svg>
-          </div>
-          <h3 class="highlight__title">Suporte de Ponta a Ponta</h3>
-          <p class="highlight__desc">Da ideia à implantação e além.</p>
-        </div>
-
+      <div class="ms-mobile-nav">
+        <a href="#solucoes">Soluções MSP <span>&gt;</span></a>
+        <a href="#ia-dev">Desenvolvimento <span>&gt;</span></a>
+        <a href="#ia-dev">IA <span>&gt;</span></a>
+        <a href="#diferenciais">Segurança <span>&gt;</span></a>
+        <a href="#segmentos">Institucional <span>&gt;</span></a>
+        <a href="#calculadora">Calculadora de Custos <span>&gt;</span></a>
       </div>
-    </section>
-
-    <!-- ========== WHAT WE DO ========== -->
-    <section class="services" id="services">
-      <div class="container">
-
-        <div class="services__header fade-in">
-          <div class="services__title-row">
-            <span class="services__deco-left">
-              <span></span>
-              <span></span>
-            </span>
-            <h2 class="services__title">O Que Fazemos</h2>
-            <span class="services__deco-right">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
-          <p class="services__subtitle">Soluções poderosas sob medida para os objetivos do seu negócio.</p>
-        </div>
-
-        <div class="services__grid">
-
-          <!-- Card 1 – Web App Development -->
-          <div class="service-card service-card--blue fade-in">
-            <img src="assets/images/web-dev.png" alt="Ilustração de monitor com código, representando Desenvolvimento Web" class="service-card__img" />
-            <h3 class="service-card__title">Desenvolvimento Web</h3>
-            <p class="service-card__desc">Websites e sistemas web modernos usando tecnologias de ponta.</p>
-            <a href="#" class="service-card__btn service-card__btn--blue" aria-label="Saber mais sobre Desenvolvimento Web">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-
-          <!-- Card 2 – Mobile App Development -->
-          <div class="service-card service-card--purple fade-in">
-            <img src="assets/images/mobile-dev.png" alt="Ilustração de smartphones com logos Apple e Android, representando Desenvolvimento Mobile" class="service-card__img" />
-            <h3 class="service-card__title">Desenvolvimento Mobile</h3>
-            <p class="service-card__desc">Aplicativos Web PWA com experiência de usuário fluida.</p>
-            <a href="#" class="service-card__btn service-card__btn--purple" aria-label="Saber mais sobre Desenvolvimento Mobile">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-
-          <!-- Card 3 – Desktop App Development -->
-          <div class="service-card service-card--orange fade-in">
-            <img src="assets/images/desktop-dev.png" alt="Ilustração de monitor com uma engrenagem, representando Desenvolvimento Desktop" class="service-card__img" />
-            <h3 class="service-card__title">Sistemas internos</h3>
-            <p class="service-card__desc">Sistemas sob medida para uso interno.</p>
-            <a href="#" class="service-card__btn service-card__btn--orange" aria-label="Saber mais sobre Desenvolvimento Desktop">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-
-          <!-- Card 4 – UX/UI Design -->
-          <div class="service-card service-card--gray fade-in">
-            <img src="assets/images/uxui-design.png" alt="Ilustração de caneta digital e paleta de cores, representando Design UX/UI" class="service-card__img" />
-            <h3 class="service-card__title">Design UX/UI</h3>
-            <p class="service-card__desc">Design limpo, intuitivo e focado na experiência do usuário.</p>
-            <a href="#" class="service-card__btn service-card__btn--royal" aria-label="Saber mais sobre Design UX/UI">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== CTA ========== -->
-    <section class="cta" id="contact">
-      <div class="cta__card">
-
-        <div class="cta__left">
-          <div class="cta__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <circle cx="12" cy="12" r="6"/>
-              <circle cx="12" cy="12" r="2"/>
-              <line x1="12" y1="2" x2="12" y2="6"/>
-              <line x1="12" y1="18" x2="12" y2="22"/>
-              <line x1="2" y1="12" x2="6" y2="12"/>
-              <line x1="18" y1="12" x2="22" y2="12"/>
-            </svg>
-          </div>
-          <div class="cta__text">
-            <h2>Sua Visão. Nossa Experiência.<br /><span class="cyan">Possibilidades Infinitas.</span></h2>
-            <p>Vamos construir algo extraordinário juntos.</p>
-          </div>
-        </div>
-
-        <div class="cta__right">
-          <a href="mailto:devenshivay@gmail.com" class="btn-talk">
-            Vamos Conversar
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="22" y1="2" x2="11" y2="13"/>
-              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-            </svg>
-          </a>
-        </div>
-
-        <!-- Decorative dashed trail -->
-        <div class="cta__plane-trail">
-          <svg viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 40C30 40 40 10 70 25C100 40 110 10 140 20C160 26 175 15 190 10" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="6 4" stroke-linecap="round"/>
-            <path d="M188 8l4 3-5 1 1-4z" fill="rgba(255,255,255,0.25)"/>
-          </svg>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========== ABOUT PROJECT ========== -->
-    <section class="about-project fade-in" id="about">
-      <div class="container about-project__inner">
-        <div class="about-project__image-container">
-          <!-- Background card -->
-          <div class="about-project__card-bg"></div>
-
-          <!-- Decorative elements -->
-          <div class="about-project__deco-dots"></div>
-
-          <!-- Profile photo -->
-          <div class="about-project__image-wrapper">
-            <img src="assets/images/perfil.png" alt="André Lima — Fundador e CEO da Nodigital" class="about-project__img" />
-          </div>
-
-          <!-- Name & role -->
-          <h4 class="about-project__photo-name">André Lima</h4>
-          <span class="about-project__photo-role">CEO & Desenvolvedor</span>
-
-          <!-- Skill tags -->
-          <div class="about-project__tags">
-            <div class="about-project__tag">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-              Full-Stack
-            </div>
-            <div class="about-project__tag">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
-              UX/UI
-            </div>
-            <div class="about-project__tag">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-              Inovação
-            </div>
-          </div>
-        </div>
-        
-        <div class="about-project__content">
-          <h2 class="about-project__title">Sobre a <span class="gradient-text">Nodigital</span></h2>
-          <h3 class="about-project__subtitle">Tecnologia acessível, design humano e inovação contínua.</h3>
-          
-          <p class="about-project__desc">
-            A <strong>Nodigital</strong> nasceu de uma inquietação: a tecnologia de ponta não deve ser um privilégio exclusivo de gigantes corporativos. Criamos nossa startup de desenvolvimento nocode e lowcode com a missão de democratizar a transformação digital para pequenas e médias empresas, oferecendo soluções web e mobile com excelente experiência do usuário, criado para negócios que buscam crescer sem perder a essência.
-          </p>
-          <p class="about-project__desc">
-            Acreditamos que cada projeto deve ser escrito pensando em quem vai utilizá-lo. É por isso que unimos engenharia de software escalável com um design centrado no usuário, garantindo uma verdadeira inclusão digital. Transformamos ideias complexas em experiências incrivelmente simples, eficientes e de alto impacto para você e para o seu cliente.
-          </p>
-          
-          <div class="about-project__founder">
-            <a href="mailto:andre.lima@nodigital.com.br" class="about-project__founder-email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              andre.lima@nodigital.com.br
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== PORTFOLIO ========== -->
-    <section class="portfolio fade-in" id="work">
-      <div class="container">
-        
-        <div class="services__header fade-in">
-          <div class="services__title-row">
-            <span class="services__deco-left">
-              <span></span>
-              <span></span>
-            </span>
-            <h2 class="services__title">Nosso Portfólio</h2>
-            <span class="services__deco-right">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
-          <p class="services__subtitle">Projetos recentes que transformaram a presença digital dos nossos clientes.</p>
-        </div>
-
-        <div class="portfolio__grid">
-          
-          <!-- Project 1 -->
-          <div class="portfolio-card fade-in">
-            <div class="portfolio-card__img-wrapper">
-              <img src="assets/images/ecommerce_web_app.png" alt="Plataforma E-commerce UI" class="portfolio-card__img" />
-              <div class="portfolio-card__overlay">
-                <a href="https://myclan.com.br" target="_blank" rel="noopener noreferrer" class="portfolio-card__link" aria-label="Ver Projeto">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-                </a>
-              </div>
-            </div>
-            <div class="portfolio-card__content">
-              <span class="portfolio-card__tag">Plataforma Web</span>
-              <h3 class="portfolio-card__title">Rede Social - Myclan</h3>
-              <p class="portfolio-card__desc">Projeto conceitual de rede social nostálgica inspirada no orkut dos anos 2000</p>
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div class="portfolio-card fade-in">
-            <div class="portfolio-card__img-wrapper">
-              <img src="assets/images/finance_mobile_app.png" alt="App de Finanças UI" class="portfolio-card__img" />
-              <div class="portfolio-card__overlay">
-                <a href="https://associacaocapacitare.com.br" target="_blank" rel="noopener noreferrer" class="portfolio-card__link" aria-label="Ver Projeto">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-                </a>
-              </div>
-            </div>
-            <div class="portfolio-card__content">
-              <span class="portfolio-card__tag">Aplicativo Móvel PWA</span>
-              <h3 class="portfolio-card__title">App - Associação Capacitare</h3>
-              <p class="portfolio-card__desc">Criamos uma plataforma completa que conecta pessoas neurodivergentes a profissionais voluntários que prestam atendimentos e mentorias.</p>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="portfolio-card fade-in">
-            <div class="portfolio-card__img-wrapper">
-              <img src="assets/images/saas_landing_page.png" alt="Lançamento SaaS UI" class="portfolio-card__img" />
-              <div class="portfolio-card__overlay">
-                <a href="https://login.appdrive.com.br" target="_blank" rel="noopener noreferrer" class="portfolio-card__link" aria-label="Ver Projeto">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-                </a>
-              </div>
-            </div>
-            <div class="portfolio-card__content">
-              <span class="portfolio-card__tag">Sistema Interno</span>
-              <h3 class="portfolio-card__title">AppDrive</h3>
-              <p class="portfolio-card__desc">Desenvolvemos e implementamos um sistema focado em administração de frotas para empresas de locação de automóveis.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== TESTIMONIALS ========== -->
-    <section class="testimonials fade-in" id="testimonials">
-      <div class="container">
-        
-        <div class="services__header fade-in">
-          <div class="services__title-row">
-            <span class="services__deco-left">
-              <span></span>
-              <span></span>
-            </span>
-            <h2 class="services__title">O Que Dizem Sobre Nós</h2>
-            <span class="services__deco-right">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
-          <p class="services__subtitle">O sucesso de nossos clientes é a nossa maior conquista.</p>
-        </div>
-
-        <div class="testimonials__grid">
-          
-          <!-- Testimonial 1 -->
-          <div class="testimonial-card fade-in">
-            <div class="testimonial-card__quote-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-            </div>
-            <div class="testimonial-card__stars">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
-            <p class="testimonial-card__text">"A equipe da Nodigital entendeu perfeitamente a nossa visão. O aplicativo não só ficou lindo, como a performance surpreendeu a todos. Nossas conversões aumentaram em 40% no primeiro mês!"</p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar">
-                <span class="testimonial-card__avatar-text">EP</span>
-              </div>
-              <div class="testimonial-card__info">
-                <h4>Estela Pian</h4>
-                <p>Gestora | Capacitare</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonial 2 -->
-          <div class="testimonial-card fade-in">
-            <div class="testimonial-card__quote-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-            </div>
-            <div class="testimonial-card__stars">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
-            <p class="testimonial-card__text">"Profissionalismo do começo ao fim. A migração do nosso sistema legado para uma plataforma moderna foi tranquila e dentro do prazo estipulado. Uma verdadeira parceria estratégica."</p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar testimonial-card__avatar--purple" style="overflow: hidden; padding: 0;">
-                <img src="assets/images/capelini.png" alt="Capelini Filho" style="width: 100%; height: 100%; object-fit: cover;" />
-              </div>
-              <div class="testimonial-card__info">
-                <h4>Capelini Filho</h4>
-                <p>CEO, Dash Analytics</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonial 3 -->
-          <div class="testimonial-card fade-in">
-            <div class="testimonial-card__quote-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-            </div>
-            <div class="testimonial-card__stars">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
-            <p class="testimonial-card__text">"Eles não apenas entregaram um design impecável, mas também otimizaram a experiência do usuário de uma forma que nunca tínhamos imaginado. Trabalho de alto nível."</p>
-            <div class="testimonial-card__author">
-              <div class="testimonial-card__avatar testimonial-card__avatar--orange" style="overflow: hidden; padding: 0;">
-                <img src="assets/images/bertoi.png" alt="Luciano Bertoi" style="width: 100%; height: 100%; object-fit: cover;" />
-              </div>
-              <div class="testimonial-card__info">
-                <h4>Luciano Bertoi</h4>
-                <p>Fundador, Bertoi Informática</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== CONTACT SECTION ========== -->
-    <section class="contact-final fade-in" id="contact-section">
-      <div class="container">
-
-        <!-- Header igual às demais seções -->
-        <div class="services__header">
-          <div class="services__title-row">
-            <span class="services__deco-left">
-              <span></span>
-              <span></span>
-            </span>
-            <h2 class="services__title">Entre em Contato</h2>
-            <span class="services__deco-right">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
-          <p class="services__subtitle">Preencha o formulário e nossa equipe retornará em até 24 horas.</p>
-        </div>
-
-        <!-- Split card: ilustração + formulário -->
-        <div class="contact-final__card contact-final__split">
-
-          <!-- Lado esquerdo: ilustração -->
-          <div class="contact-final__illus">
-            <img src="assets/images/contact_illustration.png" alt="Ilustração de pessoa com balões de conversa" class="contact-final__illus-img" />
-            <div class="contact-final__illus-info">
-              <div class="contact-final__info-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                <span>contato@nodigital.com.br</span>
-              </div>
-              <div class="contact-final__info-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                <span>(11) 98364-1085</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Lado direito: formulário -->
-          <div class="contact-final__form-side">
-            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form contact-final__form">
-              <input type="hidden" name="access_key" value="c1331b29-1485-4f7b-b92b-98cedb35f73b">
-              <input type="hidden" name="subject" value="Novo contato pelo site!">
-              <input type="hidden" name="from_name" value="Site Nodigital">
-
-              <div class="form-row">
-                <div class="pf-field">
-                  <label class="pf-label" for="nome-fin">Nome completo</label>
-                  <input class="pf-input" type="text" id="nome-fin" name="nome" required placeholder="Seu nome completo">
-                </div>
-                <div class="pf-field">
-                  <label class="pf-label" for="tel-fin">Telefone / WhatsApp</label>
-                  <input class="pf-input" type="tel" id="tel-fin" name="telefone" required placeholder="(00) 00000-0000">
-                </div>
-              </div>
-
-              <div class="pf-field">
-                <label class="pf-label" for="email-fin">E-mail</label>
-                <input class="pf-input" type="email" id="email-fin" name="email" placeholder="voce@empresa.com">
-              </div>
-
-              <div class="pf-field">
-                <label class="pf-label" for="msg-fin">Mensagem</label>
-                <textarea class="pf-input pf-textarea" id="msg-fin" name="mensagem" rows="4" placeholder="Descreva brevemente o seu projeto ou dúvida..."></textarea>
-              </div>
-
-              <button type="submit" class="btn-primary contact-final__submit">
-                Enviar Mensagem
-                <span class="btn-cta__arrow">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </span>
-              </button>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer-modern" id="footer">
-    <div class="container">
-      <div class="footer-modern__top">
-        
-        <!-- Brand Column -->
-        <div class="footer-modern__brand">
-          <a href="#" class="logo footer-logo" aria-label="nodigital home">
-            <div class="logo__icon">
-              <!-- Ícone da logo na cor branca -->
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20c5.5 0 10.45-2.22 14.07-5.82C41.35 34.92 42 30.12 42 24c0-4-2-9.5-5-13C33.5 7 29 4 24 4z" fill="#FFFFFF"/>
-                <text x="24" y="30" text-anchor="middle" font-family="Poppins, sans-serif" font-size="16" font-weight="800" fill="#0B1B33">&lt;/&gt;</text>
-              </svg>
-            </div>
-            <div class="logo__text">
-              <span class="logo__name" style="color: #FFFFFF;">nodigital</span>
-            </div>
-          </a>
-          <p class="footer-modern__desc">Transformando ideias em experiências digitais de alto impacto, escaláveis e focadas no usuário.</p>
-          <div class="footer-modern__socials">
-            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-            <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
-          </div>
-        </div>
-
-        <!-- Links Column 1 -->
-        <div class="footer-modern__links">
-          <h4 class="footer-modern__title">Empresa</h4>
-          <ul>
-            <li><a href="#about">Sobre nós</a></li>
-            <li><a href="#services">Nossos Serviços</a></li>
-            <li><a href="#work">Portfólio de Projetos</a></li>
-            <li><a href="javascript:void(0)" id="footerCta">Fale com a gente</a></li>
-          </ul>
-        </div>
-
-        <!-- Links Column 2 -->
-        <div class="footer-modern__links">
-          <h4 class="footer-modern__title">Mapa do Site</h4>
-          <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="sobre.html">Sobre Nós</a></li>
-            <li><a href="servicos.html">Nossos Serviços</a></li>
-            <li><a href="inteligencia-artificial.html">Inteligência Artificial</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="novidades.html">Novidades</a></li>
-            <li><a href="contato.html">Contato</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Column -->
-        <div class="footer-modern__contact">
-          <h4 class="footer-modern__title">Contato Direto</h4>
-          <a href="mailto:contato@nodigital.com.br" class="footer-modern__contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            contato@nodigital.com.br
-          </a>
-          <a href="tel:+5511983641085" class="footer-modern__contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            (11) 98364-1085
-          </a>
-        </div>
-
-      </div>
-
-      <div class="footer-modern__bottom">
-        <p>&copy; 2026 Nodigital. Todos os direitos reservados.</p>
-        <div class="footer-modern__legal">
-          <a href="#">Termos de Uso</a>
-          <a href="#">Política de Privacidade</a>
-        </div>
+      <div style="margin-top:auto; display:flex; flex-direction:column; gap:10px;">
+        <button class="ms-btn ms-btn--primary open-contact-modal">Falar com Especialista</button>
       </div>
     </div>
-  </footer>
+  </div>
 
-  <!-- ========== CONTACT MODAL ========== -->
-  <div class="modal-overlay" id="contactModal">
-    <div class="modal-content modal-content--split">
-      <button class="modal-close" id="closeModalBtn" aria-label="Fechar">&times;</button>
-      
-      <div class="modal-pane-left">
-        <div class="modal-pane-left__content">
-          <h2 class="modal-title-light">Pronto para inovar?</h2>
-          <p class="modal-desc-light">Conte-nos sobre a sua ideia e nós ajudaremos a transformá-la em uma poderosa experiência digital.</p>
-          <div class="modal-contact-info">
-            <div class="modal-contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <span>contato@nodigital.com.br</span>
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION (Estilo Microsoft Feature Stage)
+         ========================================================================== -->
+    <section class="ms-hero">
+      <div class="ms-container ms-hero__grid">
+        <div class="ms-hero__info">
+          <span class="ms-hero__eyebrow">TI Para Pequenas e Médias Empresas</span>
+
+          <h1 class="ms-hero__title">
+            Soluções em TI,<br>  <span class="ms-hero__title-accent">Impulsionado por IA.</span>
+          </h1>
+
+          <p class="ms-hero__desc">
+            Gerenciamos sua infraestrutura de TI, segurança e sistemas para sua empresa operar sem interrupções.
+          </p>
+
+          <div class="ms-hero__actions">
+            <a href="#calculadora" class="ms-btn ms-btn--primary ms-btn--lg">
+              Fale Conosco
+            </a>
+            <a href="#contato" class="ms-link-arrow open-contact-modal">
+              Agendar Diagnóstico Gratuito
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+
+          <div class="ms-hero__meta">
+            <div class="ms-hero__meta-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>SLA 99.9%</span>
             </div>
-            <div class="modal-contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <span>(11) 98364-1085</span>
+            <div class="ms-hero__meta-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>NOC & Monitoramento 24/7</span>
+            </div>
+            <div class="ms-hero__meta-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Boas Práticas LGPD</span>
             </div>
           </div>
         </div>
-        <!-- Decorative blob -->
-        <div class="modal-blob"></div>
-      </div>
 
-      <div class="modal-pane-right">
-        <h2 class="modal-title">Fale Conosco</h2>
-        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-          <!-- Web3Forms Config -->
-          <!-- Substitua o valor abaixo pela chave que você receberá no seu e-mail -->
-          <input type="hidden" name="access_key" value="c1331b29-1485-4f7b-b92b-98cedb35f73b">
-          <input type="hidden" name="subject" value="Novo contato pelo site!">
-          <input type="hidden" name="from_name" value="Site Nodigital">
+        <!-- Hero Visual Stage (Estilo Microsoft 365) -->
+        <div class="ms-hero__visual">
+          <img src="assets/img/hero.png" alt="Soluções em TI, Infraestrutura e IA Nodigital" class="ms-hero__img" width="600" height="450" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         QUICK ACCESS STRIP (Estilo Microsoft Icon Switcher)
+         ========================================================================== -->
+    <section class="ms-quickstrip" aria-label="Acesso Rápido a Tecnologias">
+      <div class="ms-container ms-quickstrip__grid">
+        
+        <a href="#solucoes" class="ms-quick-item">
+          <div class="ms-quick-item__icon" style="background-color: #0078D4;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"></rect><rect x="2" y="14" width="20" height="8" rx="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+          </div>
+          <span class="ms-quick-item__title">Proxmox VE</span>
+          <span class="ms-quick-item__subtitle">Virtualização HA</span>
+        </a>
+
+        <a href="#solucoes" class="ms-quick-item">
+          <div class="ms-quick-item__icon" style="background-color: #D83B01;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <span class="ms-quick-item__title">OPNSense UTM</span>
+          <span class="ms-quick-item__subtitle">Firewall & VPN</span>
+        </a>
+
+        <a href="#solucoes" class="ms-quick-item">
+          <div class="ms-quick-item__icon" style="background-color: #0067B8;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8"></rect><rect x="13" y="3" width="8" height="8"></rect><rect x="3" y="13" width="8" height="8"></rect><rect x="13" y="13" width="8" height="8"></rect></svg>
+          </div>
+          <span class="ms-quick-item__title">Windows Server</span>
+          <span class="ms-quick-item__subtitle">Active Directory & GPO</span>
+        </a>
+
+        <a href="#solucoes" class="ms-quick-item">
+          <div class="ms-quick-item__icon" style="background-color: #107C41;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+          </div>
+          <span class="ms-quick-item__title">Linux Corporativo</span>
+          <span class="ms-quick-item__subtitle">Debian, Ubuntu & Rocky</span>
+        </a>
+
+        <a href="#ia-dev" class="ms-quick-item">
+          <div class="ms-quick-item__icon" style="background-color: #5C2D91;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2z"></path><path d="M12 6v6l4 2"></path></svg>
+          </div>
+          <span class="ms-quick-item__title">Sistemas com IA</span>
+          <span class="ms-quick-item__subtitle">Vibe Coding & Automação</span>
+        </a>
+
+        <a href="#diferenciais" class="ms-quick-item">
+          <div class="ms-quick-item__icon" style="background-color: #008272;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+          </div>
+          <span class="ms-quick-item__title">Backup Imutável</span>
+          <span class="ms-quick-item__subtitle">Proteção Anti-Ransomware</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CORE SOLUTIONS (4-Card Grid Microsoft)
+         ========================================================================== -->
+    <section class="ms-section ms-section--alt" id="solucoes">
+      <div class="ms-container">
+        <div class="ms-section__header">
+          <span class="ms-section__eyebrow">Soluções Corporativas MSP</span>
+          <h2 class="ms-section__title">Infraestrutura gerenciada com engenharia de alto nível</h2>
+          <p class="ms-section__subtitle">
+            Combinamos as plataformas mais robustas do mercado global com suporte preventivo, garantindo que sua equipe nunca pare por problemas de TI.
+          </p>
+        </div>
+
+        <div class="ms-cards-grid">
           
-          <div class="form-row">
-            <div class="form-group">
-              <label for="nome">NOME *</label>
-              <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+          <!-- Card 1: Proxmox VE -->
+          <article class="ms-card">
+            <div class="ms-card__visual" style="background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%);">
+              <span class="ms-card__badge">Virtualização</span>
+              <div style="color:#60A5FA; text-align:center;">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"></rect><rect x="2" y="14" width="20" height="8" rx="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="telefone">TELEFONE *</label>
-              <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000">
+            <div class="ms-card__content">
+              <h3 class="ms-card__title">Proxmox VE & Hyper-V</h3>
+              <p class="ms-card__desc">
+                Substitua licenciamentos caros e proprietários por uma estrutura de virtualização moderna com alta disponibilidade, failover automático e snapshots rápidos.
+              </p>
+              <ul class="ms-card__bullets">
+                <li class="ms-card__bullet-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Migração P2V/V2V sem interrupção</span>
+                </li>
+                <li class="ms-card__bullet-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Storage redundante ZFS & Ceph</span>
+                </li>
+                <li class="ms-card__bullet-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Proxmox Backup Server (PBS) integrado</span>
+                </li>
+              </ul>
+              <div class="ms-card__footer">
+                <a href="#contato" class="ms-link-arrow open-contact-modal">
+                  Consultar projeto de virtualização &gt;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: OPNSense Firewall -->
+          <article class="ms-card">
+            <div class="ms-card__visual" style="background: linear-gradient(135deg, #18181B 0%, #7F1D1D 100%);">
+              <span class="ms-card__badge">Segurança Perimetral</span>
+              <div style="color:#F87171; text-align:center;">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+            </div>
+            <div class="ms-card__content">
+              <h3 class="ms-card__title">OPNSense Firewall & UTM</h3>
+              <p class="ms-card__desc">
+                Segurança perimetral completa com inspeção profunda de pacotes, bloqueio de ameaças em tempo real e interligação de filiais com VPNs ultra velozes.
+              </p>
+              <ul class="ms-card__bullets">
+                <li class="ms-card__bullet-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Sistema de Detecção de Intrusão (Suricata)</span>
+                </li>
+                <li class="ms-card__bullet-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>VPN WireGuard & IPsec de alta performance</span>
+                </li>
+                <li class="ms-card__bullet-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Filtro de conteúdo web e isolamento VLAN</span>
+                </li>
+              </ul>
+              <div class="ms-card__footer">
+                <a href="#contato" class="ms-link-arrow open-contact-modal">
+                  Proteger minha rede corporativa &gt;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Windows & Linux Server -->
+          <article class="ms-card">
+            <div class="ms-card__visual" style="background: linear-gradient(135deg, #064E3B 0%, #065F46 100%);">
+              <span class="ms-card__badge">Infraestrutura Central</span>
+              <div style="color:#34D399; text-align:center;">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+              </div>
+            </div>
+            <div class="ms-card__content">
+              <h3 class="ms-card__title">Windows & Linux Server</h3>
+              <p class="ms-card__desc">
+                Gestão centralizada de usuários, permissões e diretivas corporativas através de Active Directory (AD DS), Samba 4 e servidores de arquivos blindados.
+              </p>
+              <ul class="ms-card__bullets">
+                <li class="ms-card__bullet-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Active Directory e controle de acesso granular</span>
+                </li>
+                <li class="ms-card__bullet-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>File Server com auditoria de acessos</span>
+                </li>
+                <li class="ms-card__bullet-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Padronização e bloqueios por GPO corporativa</span>
+                </li>
+              </ul>
+              <div class="ms-card__footer">
+                <a href="#contato" class="ms-link-arrow open-contact-modal">
+                  Estruturar servidores da empresa &gt;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Sistemas com IA -->
+          <article class="ms-card">
+            <div class="ms-card__visual" style="background: linear-gradient(135deg, #3B0764 0%, #4C1D95 100%);">
+              <span class="ms-card__badge">Inovação Tecnológica</span>
+              <div style="color:#C084FC; text-align:center;">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+            </div>
+            <div class="ms-card__content">
+              <h3 class="ms-card__title">Desenvolvimento com IA</h3>
+              <p class="ms-card__desc">
+                Desenvolvemos aplicações sob medida, fluxos automatizados e agentes autônomos que transformam dados da sua empresa em produtividade e economia direta.
+              </p>
+              <ul class="ms-card__bullets">
+                <li class="ms-card__bullet-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Esteiras ágeis e sistemas sob medida</span>
+                </li>
+                <li class="ms-card__bullet-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Agentes inteligentes integrados a ERPs e bancos</span>
+                </li>
+                <li class="ms-card__bullet-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Automação de processos operacionais repetitivos</span>
+                </li>
+              </ul>
+              <div class="ms-card__footer">
+                <a href="#ia-dev" class="ms-link-arrow">
+                  Conhecer esteira de IA &gt;
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SPOTLIGHT BANNER (Estilo Microsoft Copilot / Azure Dark Spotlight)
+         ========================================================================== -->
+    <section class="ms-section" id="ia-dev" style="padding-top:20px; padding-bottom:20px;">
+      <div class="ms-container">
+        <div class="ms-spotlight">
+          <div class="ms-spotlight__grid">
+            
+            <div>
+              <span class="ms-spotlight__tag">A Nova Fronteira Tecnológica</span>
+              <h2 class="ms-spotlight__title">
+                Sistemas Sob Medida e Automação Cognitiva com IA
+              </h2>
+              <p class="ms-spotlight__desc">
+                Não fornecemos apenas suporte de infraestrutura. Apoiamos sua empresa na criação de ferramentas digitais estratégicas: portais internos, integração de bases legadas, automação de atendimento e relatórios analíticos utilizando modelos de linguagem (LLMs) de última geração.
+              </p>
+
+              <div class="ms-spotlight__features">
+                <div class="ms-spotlight-feature">
+                  <div class="ms-spotlight-feature__icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                  </div>
+                  <span class="ms-spotlight-feature__text">Aplicações Full-Stack customizadas</span>
+                </div>
+
+                <div class="ms-spotlight-feature">
+                  <div class="ms-spotlight-feature__icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                  </div>
+                  <span class="ms-spotlight-feature__text">Assistentes treinados na base da sua empresa</span>
+                </div>
+
+                <div class="ms-spotlight-feature">
+                  <div class="ms-spotlight-feature__icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                  </div>
+                  <span class="ms-spotlight-feature__text">Automação de workflows e APIs REST</span>
+                </div>
+
+                <div class="ms-spotlight-feature">
+                  <div class="ms-spotlight-feature__icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                  </div>
+                  <span class="ms-spotlight-feature__text">Extração e triagem de documentos fiscais</span>
+                </div>
+              </div>
+
+              <a href="#contato" class="ms-btn ms-btn--primary ms-btn--lg open-contact-modal">
+                Construir Sistema para Minha Empresa
+              </a>
+            </div>
+
+            <!-- Terminal Code Showcase -->
+            <div class="ms-code-preview">
+              <div class="ms-code-bar">
+                <span>nodigital-ai-agent.py</span>
+                <span>Python 3.12 + FastAPI + LLM</span>
+              </div>
+              <div class="ms-code-content">
+                <span class="ms-code-comment"># Pipeline de automação empresarial Nodigital</span><br/>
+                <span class="ms-code-keyword">from</span> nodigital.ai <span class="ms-code-keyword">import</span> EnterpriseAgent, KnowledgeRAG<br/>
+                <span class="ms-code-keyword">from</span> nodigital.infra <span class="ms-code-keyword">import</span> ProxmoxCluster, OPNSenseAPI<br/><br/>
+                <span class="ms-code-keyword">async def</span> <span class="ms-code-function">process_business_event</span>(ticket):<br/>
+                &nbsp;&nbsp;rag = <span class="ms-code-keyword">await</span> KnowledgeRAG.<span class="ms-code-function">load_policy</span>(<span class="ms-code-string">"LGPD_SLA"</span>)<br/>
+                &nbsp;&nbsp;diagnosis = <span class="ms-code-keyword">await</span> rag.<span class="ms-code-function">analyze</span>(ticket.data)<br/>
+                &nbsp;&nbsp;<span class="ms-code-keyword">if</span> diagnosis.requires_remediation:<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="ms-code-keyword">await</span> ProxmoxCluster.<span class="ms-code-function">auto_snapshot</span>(ticket.vm_id)<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="ms-code-keyword">await</span> OPNSenseAPI.<span class="ms-code-function">isolate_host</span>(ticket.ip)<br/>
+                &nbsp;&nbsp;<span class="ms-code-keyword">return</span> {<span class="ms-code-string">"status"</span>: <span class="ms-code-string">"RESOLVED"</span>, <span class="ms-code-string">"sla"</span>: <span class="ms-code-string">"&lt; 5m"</span>}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SOLUTIONS BY SEGMENT (Tabs estilo Microsoft)
+         ========================================================================== -->
+    <section class="ms-section" id="segmentos">
+      <div class="ms-container">
+        <div class="ms-section__header">
+          <span class="ms-section__eyebrow">Abordagem Especializada</span>
+          <h2 class="ms-section__title">Feito para o perfil e porte do seu negócio</h2>
+          <p class="ms-section__subtitle">
+            Cada segmento de mercado possui normas, conformidades e criticidades operacionais distintas. Conheça nossas soluções personalizadas:
+          </p>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="ms-tabs-nav" role="tablist">
+          <button class="ms-tab-btn active" data-target="tab-pme" role="tab">PMEs & Startups</button>
+          <button class="ms-tab-btn" data-target="tab-law" role="tab">Escritórios & Clínicas</button>
+          <button class="ms-tab-btn" data-target="tab-industry" role="tab">Indústria & Varejo</button>
+          <button class="ms-tab-btn" data-target="tab-corp" role="tab">Data Centers & Nuvem Híbrida</button>
+        </div>
+
+        <!-- Tab 1: PMEs -->
+        <div class="ms-tab-panel active" id="tab-pme" role="tabpanel">
+          <div class="ms-tab-content-grid">
+            <div>
+              <div class="ms-tab-header">
+                <h3 class="ms-tab-title">TI de Nível Corporativo sem Custos Exorbitantes</h3>
+                <p class="ms-tab-desc">
+                  Pequenas e médias empresas não precisam pagar licenças abusivas nem manter equipes internas de alto custo. A Nodigital assume a gestão integral da sua TI com suporte ágil e previsibilidade orçamentária.
+                </p>
+              </div>
+              <ul class="ms-feature-list">
+                <li class="ms-feature-item">
+                  <div class="ms-feature-item__icon">✓</div>
+                  <div class="ms-feature-item__text">
+                    <h4>Helpdesk Imediato para Usuários</h4>
+                    <p>Atendimento remoto rápido para estações de trabalho Windows, Linux e macOS.</p>
+                  </div>
+                </li>
+                <li class="ms-feature-item">
+                  <div class="ms-feature-item__icon">✓</div>
+                  <div class="ms-feature-item__text">
+                    <h4>Virtualização em Servidor Único com Proxmox</h4>
+                    <p>Aproveitamento máximo do hardware existente, rodando AD, File Server e ERPs em instâncias isoladas.</p>
+                  </div>
+                </li>
+                <li class="ms-feature-item">
+                  <div class="ms-feature-item__icon">✓</div>
+                  <div class="ms-feature-item__text">
+                    <h4>Backup Automatizado em Nuvem</h4>
+                    <p>Cópias diárias e semanais fora do escritório para proteção total contra roubo ou sinistro.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div style="background:var(--ms-bg-alt); padding:28px; border-radius:var(--radius-sm); border:1px solid var(--ms-border); display:flex; flex-direction:column; justify-content:center;">
+              <h4 style="font-size:1.2rem; font-weight:700; margin-bottom:12px;">Por que o modelo MSP é ideal para sua empresa?</h4>
+              <p style="color:var(--ms-text-secondary); font-size:0.92rem; margin-bottom:20px; line-height:1.6;">
+                Em vez de chamar o técnico apenas quando o sistema quebra ("quebra-paga"), nosso modelo MSP previne falhas através de sensores 24/7. Isso resulta em 90% menos paradas no expediente e redução drástica de prejuízos operacionais.
+              </p>
+              <a href="#calculadora" class="ms-btn ms-btn--primary">Simular Plano para sua Empresa</a>
             </div>
           </div>
-          <div class="form-group">
-            <label for="email">E-MAIL</label>
-            <input type="email" id="email" name="email" placeholder="seu@email.com">
+        </div>
+
+        <!-- Tab 2: Escritórios & Clínicas -->
+        <div class="ms-tab-panel" id="tab-law" role="tabpanel">
+          <div class="ms-tab-content-grid">
+            <div>
+              <div class="ms-tab-header">
+                <h3 class="ms-tab-title">Sigilo Máximo, LGPD e Continuidade Médica/Jurídica</h3>
+                <p class="ms-tab-desc">
+                  Clínicas médicas, hospitais, escritórios de advocacia e contabilidade lidam com informações sensíveis sob constante risco de vazamento e regulamentação rígida.
+                </p>
+              </div>
+              <ul class="ms-feature-list">
+                <li class="ms-feature-item">
+                  <div class="ms-feature-item__icon">✓</div>
+                  <div class="ms-feature-item__text">
+                    <h4>Criptografia e Controle de Acesso por Usuário</h4>
+                    <p>Pastas restritas, bloqueio de pendrives e trilha de auditoria completa de quem acessou arquivos.</p>
+                  </div>
+                </li>
+                <li class="ms-feature-item">
+                  <div class="ms-feature-item__icon">✓</div>
+                  <div class="ms-feature-item__text">
+                    <h4>Backup Imutável Contra Ransomware</h4>
+                    <p>Sua base de clientes ou prontuários fica gravada em volume imutável, impossível de ser sequestrada.</p>
+                  </div>
+                </li>
+                <li class="ms-feature-item">
+                  <div class="ms-feature-item__icon">✓</div>
+                  <div class="ms-feature-item__text">
+                    <h4>Conexão Home Office Blindada com VPN</h4>
+                    <p>Sócios e colaboradores acessam os sistemas de qualquer lugar com túnel criptografado via OPNSense.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div style="background:var(--ms-bg-alt); padding:28px; border-radius:var(--radius-sm); border:1px solid var(--ms-border); display:flex; flex-direction:column; justify-content:center;">
+              <h4 style="font-size:1.2rem; font-weight:700; margin-bottom:12px;">Conformidade Legal e Segurança</h4>
+              <p style="color:var(--ms-text-secondary); font-size:0.92rem; margin-bottom:20px; line-height:1.6;">
+                Fornecemos relatórios executivos mensais prontos para auditorias da ANPD (LGPD), atestando políticas ativas de proteção de dados e governança de acessos.
+              </p>
+              <a href="#contato" class="ms-btn ms-btn--primary open-contact-modal">Solicitar Diagnóstico de Segurança</a>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="mensagem">MENSAGEM</label>
-            <textarea id="mensagem" name="mensagem" rows="3" placeholder="Como podemos ajudar?"></textarea>
+        </div>
+
+        <!-- Tab 3: Indústria & Varejo -->
+        <div class="ms-tab-panel" id="tab-industry" role="tabpanel">
+          <div class="ms-tab-content-grid">
+            <div>
+              <div class="ms-tab-header">
+                <h3 class="ms-tab-title">Redes Industriais, Pontos de Venda (PDVs) e Filiais</h3>
+                <p class="ms-tab-desc">
+                  Chão de fábrica e frentes de caixa exigem latência mínima, isolamento de equipamentos IoT e tolerância a falhas de link de internet.
+                </p>
+              </div>
+              <ul class="ms-feature-list">
+                <li class="ms-feature-item">
+                  <div class="ms-feature-item__icon">✓</div>
+                  <div class="ms-feature-item__text">
+                    <h4>Balanceamento de Links (Failover Automático)</h4>
+                    <p>Dois ou mais provedores de internet trabalhando juntos; se um cair, o outro assume em milissegundos.</p>
+                  </div>
+                </li>
+                <li class="ms-feature-item">
+                  <div class="ms-feature-item__icon">✓</div>
+                  <div class="ms-feature-item__text">
+                    <h4>Segmentação de Rede com VLANs</h4>
+                    <p>Rede de visitantes, rede de PDVs, servidores e máquinas industriais 100% isoladas para segurança.</p>
+                  </div>
+                </li>
+                <li class="ms-feature-item">
+                  <div class="ms-feature-item__icon">✓</div>
+                  <div class="ms-feature-item__text">
+                    <h4>Wi-Fi Corporativo de Alta Densidade</h4>
+                    <p>Cobertura estável para leitores de código de barras, coletores e dispositivos móveis.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div style="background:var(--ms-bg-alt); padding:28px; border-radius:var(--radius-sm); border:1px solid var(--ms-border); display:flex; flex-direction:column; justify-content:center;">
+              <h4 style="font-size:1.2rem; font-weight:700; margin-bottom:12px;">Sua Linha de Produção Não Pode Parar</h4>
+              <p style="color:var(--ms-text-secondary); font-size:0.92rem; margin-bottom:20px; line-height:1.6;">
+                Com o NOC 24/7 da Nodigital, oscilações térmicas de switches, perdas de pacotes ou saturação de links são identificadas antes de travar a expedição de pedidos.
+              </p>
+              <a href="#contato" class="ms-btn ms-btn--primary open-contact-modal">Falar com Especialista em Redes</a>
+            </div>
           </div>
-          <button type="submit" class="btn-primary modal-submit">Enviar Mensagem</button>
+        </div>
+
+        <!-- Tab 4: Data Centers -->
+        <div class="ms-tab-panel" id="tab-corp" role="tabpanel">
+          <div class="ms-tab-content-grid">
+            <div>
+              <div class="ms-tab-header">
+                <h3 class="ms-tab-title">Nuvem Híbrida, Clusters Proxmox e DevOps</h3>
+                <p class="ms-tab-desc">
+                  Para ambientes com dezenas ou centenas de máquinas virtuais, bancos de dados relacionais e esteiras de integração contínua.
+                </p>
+              </div>
+              <ul class="ms-feature-list">
+                <li class="ms-feature-item">
+                  <div class="ms-feature-item__icon">✓</div>
+                  <div class="ms-feature-item__text">
+                    <h4>Cluster Multi-Node Proxmox VE</h4>
+                    <p>Tolerância a desastres físicos, migração a quente (Live Migration) de servidores inteiros sem downtime.</p>
+                  </div>
+                </li>
+                <li class="ms-feature-item">
+                  <div class="ms-feature-item__icon">✓</div>
+                  <div class="ms-feature-item__text">
+                    <h4>Storage Distribuído Ceph & NVMe</h4>
+                    <p>Velocidade extrema de leitura/escrita com replicação automática de blocos em múltiplos servidores.</p>
+                  </div>
+                </li>
+                <li class="ms-feature-item">
+                  <div class="ms-feature-item__icon">✓</div>
+                  <div class="ms-feature-item__text">
+                    <h4>Esteira de IA & Automações Contínuas</h4>
+                    <p>Agentes inteligentes monitorando logs e orquestrando tarefas operacionais complexas.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div style="background:var(--ms-bg-alt); padding:28px; border-radius:var(--radius-sm); border:1px solid var(--ms-border); display:flex; flex-direction:column; justify-content:center;">
+              <h4 style="font-size:1.2rem; font-weight:700; margin-bottom:12px;">Engenharia Sênior Dedicada</h4>
+              <p style="color:var(--ms-text-secondary); font-size:0.92rem; margin-bottom:20px; line-height:1.6;">
+                Consultores certificados em Linux, Proxmox, Microsoft e Redes para arquitetar e gerenciar sua infraestrutura com as melhores práticas mundiais.
+              </p>
+              <a href="#contato" class="ms-btn ms-btn--primary open-contact-modal">Agendar Reunião Técnica</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE MSP CALCULATOR (Estilo Azure Pricing Calculator)
+         ========================================================================== -->
+    <section class="ms-section ms-section--alt" id="calculadora">
+      <div class="ms-container">
+        <div class="ms-section__header">
+          <span class="ms-section__eyebrow">Transparência e Previsibilidade</span>
+          <h2 class="ms-section__title">Simulador Interativo de Serviços MSP</h2>
+          <p class="ms-section__subtitle">
+            Estime em tempo real o valor mensal para terceirização e gestão completa da TI da sua empresa, incluindo helpdesk, servidores, firewall e inteligência artificial.
+          </p>
+        </div>
+
+        <div class="ms-calculator">
+          <div class="ms-calculator__grid">
+            
+            <!-- Sliders & Options Area -->
+            <div class="ms-calc-controls">
+              
+              <!-- Slider 1: Workstations -->
+              <div class="ms-calc-group">
+                <div class="ms-calc-header">
+                  <label for="calc-stations" class="ms-calc-label">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    Estações de Trabalho & Usuários (PCs/Notebooks)
+                  </label>
+                  <span class="ms-calc-value"><span id="val-stations">15</span> estações</span>
+                </div>
+                <input type="range" id="calc-stations" class="ms-range-slider" min="3" max="150" step="1" value="15" />
+                <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--ms-text-muted); margin-top:4px;">
+                  <span>3 PCs</span>
+                  <span>50 PCs</span>
+                  <span>100 PCs</span>
+                  <span>150+ PCs</span>
+                </div>
+              </div>
+
+              <!-- Slider 2: Servers -->
+              <div class="ms-calc-group">
+                <div class="ms-calc-header">
+                  <label for="calc-servers" class="ms-calc-label">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"></rect><rect x="2" y="14" width="20" height="8" rx="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                    Servidores Físicos e Máquinas Virtuais (Proxmox / Windows / Linux)
+                  </label>
+                  <span class="ms-calc-value"><span id="val-servers">2</span> servidores</span>
+                </div>
+                <input type="range" id="calc-servers" class="ms-range-slider" min="0" max="25" step="1" value="2" />
+                <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--ms-text-muted); margin-top:4px;">
+                  <span>Nenhum</span>
+                  <span>5 Servidores</span>
+                  <span>15 Servidores</span>
+                  <span>25+ Servidores</span>
+                </div>
+              </div>
+
+              <!-- Checkbox Options Grid -->
+              <div class="ms-calc-group">
+                <label class="ms-calc-label" style="margin-bottom:12px;">Módulos Adicionais de Segurança e Inovação</label>
+                <div class="ms-options-grid">
+                  
+                  <label class="ms-option-card selected" for="calc-firewall">
+                    <input type="checkbox" id="calc-firewall" checked />
+                    <div class="ms-option-content">
+                      <h5>OPNSense UTM Gerenciado</h5>
+                      <p>Firewall dedicado, VPNs, IDS/IPS e regras de bloqueio.</p>
+                    </div>
+                  </label>
+
+                  <label class="ms-option-card selected" for="calc-backup">
+                    <input type="checkbox" id="calc-backup" checked />
+                    <div class="ms-option-content">
+                      <h5>Backup Imutável 3-2-1</h5>
+                      <p>Armazenamento em nuvem criptografado anti-ransomware.</p>
+                    </div>
+                  </label>
+
+                  <label class="ms-option-card" for="calc-ai">
+                    <input type="checkbox" id="calc-ai" />
+                    <div class="ms-option-content">
+                      <h5>Desenvolvimento & IA Sob Medida</h5>
+                      <p>Automações contínuas, agentes e criação de sistemas.</p>
+                    </div>
+                  </label>
+
+                  <div class="ms-option-card" style="cursor:default;">
+                    <div class="ms-option-content">
+                      <h5>Inventário & EDR Antivírus</h5>
+                      <p style="color:#107C41; font-weight:600;">✓ Incluso em todas as estações</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- SLA Choice -->
+              <div class="ms-calc-group">
+                <label class="ms-calc-label" style="margin-bottom:12px;">Regime de Atendimento (SLA)</label>
+                <div class="ms-options-grid">
+                  <label class="ms-option-card selected" for="sla-8x5">
+                    <input type="radio" id="sla-8x5" name="calc-support" value="8x5" checked />
+                    <div class="ms-option-content">
+                      <h5>Comercial 8x5</h5>
+                      <p>Segunda a sexta das 08h às 18h com plantão preventivo.</p>
+                    </div>
+                  </label>
+
+                  <label class="ms-option-card" for="sla-24x7">
+                    <input type="radio" id="sla-24x7" name="calc-support" value="24x7" />
+                    <div class="ms-option-content">
+                      <h5>NOC 24x7 / Plantão Total</h5>
+                      <p>Suporte ininterrupto 24 horas para operações críticas.</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Sticky Summary Card -->
+            <div class="ms-calc-summary">
+              <h4 class="ms-calc-summary__title">Resumo da Configuração</h4>
+              
+              <ul class="ms-summary-list">
+                <li class="ms-summary-item">
+                  <span>Estações / Suporte:</span>
+                  <span id="sum-stations">15 un (R$ 1.275)</span>
+                </li>
+                <li class="ms-summary-item">
+                  <span>Servidores (Proxmox/AD):</span>
+                  <span id="sum-servers">2 un (R$ 640)</span>
+                </li>
+                <li class="ms-summary-item">
+                  <span>Firewall OPNSense UTM:</span>
+                  <span id="sum-firewall">Sim (R$ 450)</span>
+                </li>
+                <li class="ms-summary-item">
+                  <span>Backup Imutável em Nuvem:</span>
+                  <span id="sum-backup">Sim (R$ 380)</span>
+                </li>
+                <li class="ms-summary-item">
+                  <span>Desenvolvimento IA:</span>
+                  <span id="sum-ai">Não</span>
+                </li>
+                <li class="ms-summary-item">
+                  <span>Cobertura de Horário:</span>
+                  <span id="sum-sla">Comercial 8x5</span>
+                </li>
+              </ul>
+
+              <div class="ms-summary-total">
+                <div class="ms-summary-total__label">Investimento Mensal Estimado</div>
+                <div class="ms-summary-total__price" id="total-price">R$ 2.745</div>
+                <div class="ms-summary-total__period">Contrato mensal faturado para PJ • Sem fidelidade abusiva</div>
+              </div>
+
+              <button class="ms-btn ms-btn--primary ms-btn--lg" id="btn-calculator-proposal" style="width:100%;">
+                Solicitar Proposta Formal
+              </button>
+              
+              <div style="margin-top:16px; font-size:0.76rem; color:var(--ms-text-muted); text-align:center;">
+                *Valor referencial para planejamento. Inclui onboarding técnico gratuito no primeiro mês.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         METRICS & TRUST BANNER
+         ========================================================================== -->
+    <section class="ms-metrics" id="diferenciais">
+      <div class="ms-container ms-metrics__grid">
+        <div>
+          <div class="ms-metric-number">99.9%</div>
+          <div class="ms-metric-label">Uptime Garantido</div>
+          <div class="ms-metric-desc">Disponibilidade de servidores e rede estipulada em SLA contratual.</div>
+        </div>
+        <div>
+          <div class="ms-metric-number">&lt; 15 min</div>
+          <div class="ms-metric-label">Resposta Crítica</div>
+          <div class="ms-metric-desc">Engenheiros prontos para acionamentos emergenciais imediatos.</div>
+        </div>
+        <div>
+          <div class="ms-metric-number">+500</div>
+          <div class="ms-metric-label">Servidores & VMs</div>
+          <div class="ms-metric-desc">Ambientes Proxmox, Linux e Windows monitorados 24 horas por dia.</div>
+        </div>
+        <div>
+          <div class="ms-metric-number">100%</div>
+          <div class="ms-metric-label">Conformidade LGPD</div>
+          <div class="ms-metric-desc">Rotinas documentadas, controle de privilégios e auditoria perene.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTATO & CALL TO ACTION SECTION
+         ========================================================================== -->
+    <section class="ms-section" id="contato">
+      <div class="ms-container" style="text-align:center; max-width:800px;">
+        <span class="ms-section__eyebrow">Atendimento Especializado</span>
+        <h2 class="ms-section__title">Dê à sua empresa a TI sólida que ela merece</h2>
+        <p class="ms-section__subtitle" style="margin:0 auto 32px;">
+          Fale diretamente com os arquitetos de soluções da Nodigital. Analisamos sua infraestrutura atual e apresentamos um plano de melhorias sem custos iniciais.
+        </p>
+        <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+          <button class="ms-btn ms-btn--primary ms-btn--lg open-contact-modal">
+            Agendar Diagnóstico Gratuito
+          </button>
+          <a href="https://api.whatsapp.com/send?phone=5511999999999&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20as%20solu%C3%A7%C3%B5es%20MSP%20da%20Nodigital." target="_blank" rel="noopener" class="ms-btn ms-btn--secondary ms-btn--lg">
+            Falar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       CONTACT & PROPOSAL MODAL
+       ========================================================================== -->
+  <div class="ms-modal" id="contact-modal" aria-hidden="true" role="dialog">
+    <div class="ms-modal__dialog">
+      <div class="ms-modal__header">
+        <h3 class="ms-modal__title">Solicitar Proposta / Diagnóstico Gratuito</h3>
+        <button class="ms-modal__close" aria-label="Fechar modal">&times;</button>
+      </div>
+      <div class="ms-modal__body">
+        <form id="msp-contact-form">
+          <div class="ms-form-group">
+            <label for="form-name" class="ms-form-label">Seu Nome Completo</label>
+            <input type="text" id="form-name" class="ms-form-input" placeholder="Ex: Carlos Silva" required />
+          </div>
+
+          <div class="ms-form-group">
+            <label for="form-company" class="ms-form-label">Nome da Empresa</label>
+            <input type="text" id="form-company" class="ms-form-input" placeholder="Ex: Silva & Associados" required />
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+            <div class="ms-form-group">
+              <label for="form-email" class="ms-form-label">E-mail Corporativo</label>
+              <input type="email" id="form-email" class="ms-form-input" placeholder="carlos@empresa.com.br" required />
+            </div>
+            <div class="ms-form-group">
+              <label for="form-phone" class="ms-form-label">WhatsApp / Telefone</label>
+              <input type="tel" id="form-phone" class="ms-form-input" placeholder="(11) 99999-9999" required />
+            </div>
+          </div>
+
+          <div class="ms-form-group">
+            <label for="form-service" class="ms-form-label">Principal Interesse</label>
+            <select id="form-service" class="ms-form-select">
+              <option value="MSP Completo">Terceirização Completa de TI (MSP)</option>
+              <option value="Proxmox e Virtualizacao">Virtualização com Proxmox VE & Migração</option>
+              <option value="Firewall OPNSense">Segurança de Rede com OPNSense UTM</option>
+              <option value="Windows e Linux Server">Windows Server / AD / File Server</option>
+              <option value="Desenvolvimento com IA">Desenvolvimento de Sistemas com IA</option>
+              <option value="Backup e Ciberseguranca">Backup Imutável & Cibersegurança</option>
+            </select>
+          </div>
+
+          <div class="ms-form-group">
+            <label for="form-notes" class="ms-form-label">Detalhes da Demanda ou Simulação</label>
+            <textarea id="form-notes" class="ms-form-textarea" rows="4" placeholder="Descreva brevemente sua infraestrutura ou necessidades..."></textarea>
+          </div>
+
+          <button type="submit" class="ms-btn ms-btn--primary ms-btn--lg" style="width:100%;">
+            Enviar e Iniciar Atendimento
+          </button>
         </form>
       </div>
     </div>
   </div>
 
-  <!-- ========== SUCCESS MODAL ========== -->
-  <div class="modal-overlay" id="successModal">
-    <div class="modal-content success-content">
-      <button class="modal-close" id="closeSuccessBtn" aria-label="Fechar">&times;</button>
-      <div class="success-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-          <polyline points="22 4 12 14.01 9 11.01"></polyline>
-        </svg>
+  <!-- ==========================================================================
+       CORPORATE FOOTER (Estilo Microsoft Corporate Footer)
+       ========================================================================== -->
+  <footer class="ms-footer">
+    <div class="ms-container">
+      <div class="ms-footer__grid">
+        
+        <div>
+          <h4 class="ms-footer__col-title">Soluções MSP</h4>
+          <ul class="ms-footer__list">
+            <li><a href="#solucoes" class="ms-footer__link">Virtualização Proxmox VE</a></li>
+            <li><a href="#solucoes" class="ms-footer__link">Windows Server & AD DS</a></li>
+            <li><a href="#solucoes" class="ms-footer__link">Linux Corporativo & Samba</a></li>
+            <li><a href="#solucoes" class="ms-footer__link">Helpdesk & Service Desk</a></li>
+            <li><a href="#solucoes" class="ms-footer__link">NOC e Monitoramento 24/7</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="ms-footer__col-title">Redes & Segurança</h4>
+          <ul class="ms-footer__list">
+            <li><a href="#solucoes" class="ms-footer__link">OPNSense UTM Firewall</a></li>
+            <li><a href="#solucoes" class="ms-footer__link">VPN WireGuard & IPsec</a></li>
+            <li><a href="#diferenciais" class="ms-footer__link">Backup Imutável 3-2-1</a></li>
+            <li><a href="#diferenciais" class="ms-footer__link">Defesa Anti-Ransomware</a></li>
+            <li><a href="#diferenciais" class="ms-footer__link">Adequação à LGPD</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="ms-footer__col-title">Desenvolvimento & IA</h4>
+          <ul class="ms-footer__list">
+            <li><a href="#ia-dev" class="ms-footer__link">Aplicações Sob Medida</a></li>
+            <li><a href="#ia-dev" class="ms-footer__link">Agentes Autônomos de IA</a></li>
+            <li><a href="#ia-dev" class="ms-footer__link">Automação de Workflows</a></li>
+            <li><a href="#ia-dev" class="ms-footer__link">Integrações de ERPs & APIs</a></li>
+            <li><a href="#ia-dev" class="ms-footer__link">Esteiras Vibe Coding</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="ms-footer__col-title">Segmentos</h4>
+          <ul class="ms-footer__list">
+            <li><a href="#segmentos" class="ms-footer__link">PMEs & Startups</a></li>
+            <li><a href="#segmentos" class="ms-footer__link">Escritórios & Advocacia</a></li>
+            <li><a href="#segmentos" class="ms-footer__link">Clínicas & Saúde</a></li>
+            <li><a href="#segmentos" class="ms-footer__link">Indústria & Logística</a></li>
+            <li><a href="#segmentos" class="ms-footer__link">Varejo & Franquias</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="ms-footer__col-title">Empresa & Contato</h4>
+          <ul class="ms-footer__list">
+            <li><a href="#calculadora" class="ms-footer__link">Simulador de Custos</a></li>
+            <li><a href="#contato" class="ms-footer__link open-contact-modal">Diagnóstico Gratuito</a></li>
+            <li><a href="#diferenciais" class="ms-footer__link">Níveis de SLA</a></li>
+            <li><a href="#contato" class="ms-footer__link open-contact-modal">Atendimento Comercial</a></li>
+            <li><a href="#" class="ms-footer__link">Área do Cliente</a></li>
+          </ul>
+        </div>
+
       </div>
-      <h2 class="modal-title text-center">Mensagem Enviada!</h2>
-      <p class="modal-desc text-center">Recebemos o seu contato e retornaremos o mais breve possível.</p>
-      <button class="btn-primary success-btn" id="successOkBtn">Entendido</button>
+
+      <!-- Bottom Legal Row -->
+      <div class="ms-footer__bottom">
+        <div class="ms-footer__lang">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>Português (Brasil)</span>
+        </div>
+
+        <div class="ms-footer__legal">
+          <a href="#">Privacidade & Cookies</a>
+          <a href="#">Termos de Uso</a>
+          <a href="#">Acordo de Nível de Serviço (SLA)</a>
+          <a href="#">Segurança da Informação</a>
+          <span>© 2026 Nodigital Soluções de TI. Todos os direitos reservados.</span>
+        </div>
+      </div>
     </div>
-  </div>
+  </footer>
 
-  <!-- ========== WHATSAPP BUTTON ========== -->
-  <a href="https://wa.me/5511983641085" class="whatsapp-btn" target="_blank" aria-label="Fale conosco no WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-    </svg>
-  </a>
-
-  <!-- WordPress Style Smooth Scroll -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
