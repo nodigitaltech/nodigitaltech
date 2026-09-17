@@ -1614,31 +1614,38 @@ button, input, select, textarea {
 
 @media (max-width: 768px) {
   .ms-topbar {
-    padding: 10px 14px;
-    font-size: 0.82rem;
+    padding: 13px 14px !important;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    font-size: 0.84rem;
     line-height: 1.4;
   }
   .ms-topbar .ms-container {
     padding-left: 12px;
     padding-right: 12px;
+    width: 100%;
   }
   .ms-topbar__content {
     gap: 8px;
     flex-wrap: nowrap;
     justify-content: center;
+    align-items: center;
     white-space: nowrap;
+    width: 100%;
   }
   .ms-topbar__text-desktop {
-    display: none;
+    display: none !important;
   }
   .ms-topbar__text-mobile {
-    display: inline;
+    display: inline !important;
     font-weight: 500;
   }
   .ms-topbar__link {
     flex-shrink: 0;
     white-space: nowrap;
-    padding: 2px 0;
+    padding: 2px 4px;
+    font-weight: 700;
   }
   .ms-cards-grid {
     grid-template-columns: 1fr;
@@ -1662,8 +1669,9 @@ button, input, select, textarea {
 
 @media (max-width: 480px) {
   .ms-topbar {
-    padding: 9px 10px;
-    font-size: 0.79rem;
+    padding: 12px 10px !important;
+    min-height: 44px;
+    font-size: 0.82rem;
   }
   .ms-topbar__content {
     gap: 6px;
@@ -1687,8 +1695,9 @@ button, input, select, textarea {
 
 @media (max-width: 360px) {
   .ms-topbar {
-    padding: 8px 6px;
-    font-size: 0.75rem;
+    padding: 10px 6px !important;
+    min-height: 42px;
+    font-size: 0.76rem;
   }
   .ms-topbar__content {
     gap: 4px;
