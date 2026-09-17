@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testes de LLMs Locais &amp; IA On-Premises | Nodigital Tech</title>
+  <meta name="description"
+    content="Estudos e testes práticos do Laboratório Nodigital com Ollama, DeepSeek e LLMs open-source executados localmente on-premises com privacidade absoluta e conformidade com a LGPD." />
+  <meta name="keywords"
+    content="LLM local, Ollama corporativo, IA on-premises, DeepSeek local, Llama 3 local, privacidade IA, soberania de dados, Nodigital Tech" />
+  <meta name="author" content="Nodigital Tech" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Testes de LLMs Locais &amp; IA On-Premises | Nodigital Tech" />
+  <meta property="og:description"
+    content="Descubra as vantagens da execução de inteligência artificial corporativa local com Ollama: privacidade total, custo zero por token e controle dos seus dados." />
+  <meta property="og:image" content="assets/img/banner-ia-local.jpg" />
+
+  <!-- Fonts & Favicon -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&family=Consolas&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       TOP ANNOUNCEMENT BAR
+       ========================================================================== -->
+  <aside class="ms-topbar" aria-label="Aviso de Suporte">
+    <div class="ms-container ms-topbar__container">
+      <div class="ms-topbar__content">
+        <span class="ms-topbar__badge">Plantão TI</span>
+        <span class="ms-topbar__text ms-topbar__text-desktop">Suporte Técnico Especializado para Empresas em Todo o
+          Brasil:</span>
+        <span class="ms-topbar__text ms-topbar__text-mobile">Plantão Técnico Nacional:</span>
+        <a href="https://api.whatsapp.com/send?phone=5511999999999&amp;text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20laborat%C3%B3rio%20de%20IA%20da%20Nodigital"
+          target="_blank" rel="noopener noreferrer" class="ms-topbar__link">
+          (11) 99999-9999
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       GLOBAL NAVIGATION HEADER (Estilo Microsoft.com)
+       ========================================================================== -->
+  <header class="ms-header" role="banner">
+    <div class="ms-container ms-header__inner">
+
+      <div class="ms-header__left">
+        <a href="index.html" class="ms-brand" aria-label="Nodigital Tech Home">
+          <img src="assets/img/logo.png" alt="Nodigital Tech Logo" class="ms-brand__logo" />
+          <span class="ms-brand__tag">Tecnologia</span>
+        </a>
+
+        <nav class="ms-nav" aria-label="Navegação Principal">
+          <ul class="ms-nav__list">
+            <li class="ms-nav__item"><a href="index.html#solucoes" class="ms-nav__link">Soluções</a></li>
+            <li class="ms-nav__item"><a href="ia-local.html" class="ms-nav__link active" style="color:var(--ms-blue-primary); font-weight:700;">Laboratório IA</a></li>
+            <li class="ms-nav__item"><a href="index.html#diferenciais" class="ms-nav__link">Diferenciais</a></li>
+            <li class="ms-nav__item"><a href="index.html#calculadora" class="ms-nav__link">Simulador MSP</a></li>
+            <li class="ms-nav__item"><a href="index.html#contato" class="ms-nav__link">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="ms-header__right">
+        <a href="index.html#contato" class="ms-btn ms-btn--primary ms-btn--sm open-contact-modal">
+          Solicitar Diagnóstico
+        </a>
+        <button class="ms-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="ms-mobile-drawer" aria-hidden="true">
+    <div class="ms-mobile-drawer__content">
+      <div class="ms-mobile-drawer__header">
+        <img src="assets/img/logo.png" alt="Nodigital Tech" class="ms-brand__logo" />
+        <button class="ms-drawer-close" aria-label="Fechar menu">&times;</button>
+      </div>
+      <ul class="ms-mobile-drawer__list">
+        <li><a href="index.html#solucoes">Soluções de Infraestrutura</a></li>
+        <li><a href="ia-local.html" style="color:var(--ms-blue-primary); font-weight:700;">Laboratório de IA Local</a></li>
+        <li><a href="index.html#diferenciais">Diferenciais &amp; SLA</a></li>
+        <li><a href="index.html#calculadora">Simulador de Investimento</a></li>
+        <li><a href="index.html#contato">Fale com Especialistas</a></li>
+      </ul>
+      <div class="ms-mobile-drawer__footer">
+        <a href="index.html#contato" class="ms-btn ms-btn--primary ms-btn--lg open-contact-modal" style="width:100%; text-align:center;">
+          Falar com um Especialista
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       BREADCRUMB BAR
+       ========================================================================== -->
+  <nav class="ms-breadcrumb" aria-label="Trilha de Navegação">
+    <div class="ms-container">
+      <ul class="ms-breadcrumb__list">
+        <li><a href="index.html" class="ms-breadcrumb__link">Início</a></li>
+        <li class="ms-breadcrumb__separator">&rsaquo;</li>
+        <li><a href="index.html#ia-dev" class="ms-breadcrumb__link">Inovação</a></li>
+        <li class="ms-breadcrumb__separator">&rsaquo;</li>
+        <li class="ms-breadcrumb__current" aria-current="page">Testes de LLMs Locais &amp; Ollama</li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION (Artigo / Solução Especializada)
+         ========================================================================== -->
+    <section class="ms-article-hero">
+      <div class="ms-container">
+        <span class="ms-article-hero__badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="4 17 10 11 4 5"></polyline>
+            <line x1="12" y1="19" x2="20" y2="19"></line>
+          </svg>
+          Laboratório de P&amp;D • Inteligência Artificial On-Premises
+        </span>
+        <h1 class="ms-article-hero__title">
+          Execução de LLMs Locais: O Futuro da IA Corporativa com Privacidade Absoluta
+        </h1>
+        <p class="ms-article-hero__lead">
+          Como o runtime Ollama e modelos de linguagem open-source de ponta (DeepSeek, Llama 3 e Mistral) permitem que sua empresa processe dados confidenciais com IA sem jamais enviá-los para a nuvem pública.
+        </p>
+        <div class="ms-article-hero__meta">
+          <span>Estudo Técnico Nodigital</span>
+          <span>•</span>
+          <span>Foco em LGPD e Segurança da Informação</span>
+          <span>•</span>
+          <span>Atualizado em 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ARTICLE CONTENT & SIDEBAR
+         ========================================================================== -->
+    <section class="ms-section" style="background-color: #FFFFFF; padding-top: 32px;">
+      <div class="ms-container ms-article-layout">
+
+        <!-- Main Prose Column -->
+        <article class="ms-prose">
+          
+          <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 32px; box-shadow: var(--shadow-sm); background-color: #F2F2F2;">
+            <img src="assets/img/banner-ia-local.jpg" alt="Laboratório de IA Local Nodigital com Ollama" style="width: 100%; height: auto; display: block;" />
+          </div>
+
+          <h2>O Dilema da IA em Nuvem Pública nas Empresas</h2>
+          <p>
+            O surgimento dos Modelos de Linguagem de Larga Escala (LLMs) transformou a produtividade no ambiente corporativo. No entanto, ferramentas comerciais em nuvem (SaaS) trazem um risco crítico: <strong>a perda de controle sobre onde os dados residem e como são utilizados</strong>.
+          </p>
+          <p>
+            Quando um colaborador cola um contrato confidencial, uma planilha financeira, credenciais ou código-fonte interno em uma IA pública, essas informações trafegam pela internet e são armazenadas em servidores de terceiros. Para empresas que lidam com dados sensíveis, conformidade estrita com a <strong>LGPD</strong> ou contratos rígidos de confidencialidade (NDA), esse risco simplesmente não é aceitável.
+          </p>
+
+          <div class="ms-callout">
+            <div class="ms-callout__title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              O Princípio da Soberania de Dados
+            </div>
+            <p class="ms-callout__text">
+              Na inferência local com Ollama, o modelo de inteligência artificial roda dentro de uma máquina física ou servidor exclusivo da sua empresa. Os dados nunca saem da sua rede interna e o tráfego de saída pode ser 100% bloqueado no firewall.
+            </p>
+          </div>
+
+          <h2>O que é o Ollama e por que ele é Revolucionário?</h2>
+          <p>
+            O <strong>Ollama</strong> é um dos projetos mais maduros do ecossistema de inteligência artificial moderna. Ele permite baixar, configurar e executar modelos de código aberto de forma extremamente otimizada em hardware corporativo comum, sem a complexidade que existia há poucos anos.
+          </p>
+          <p>
+            Através de técnicas avançadas de quantização (como GGUF de 4 bits ou 8 bits), modelos gigantescos agora cabem na memória de placas de vídeo modernas (VRAM) ou memórias unificadas, entregando tempos de resposta de dezenas de palavras por segundo em equipamentos dedicados.
+          </p>
+
+          <h2>Comparativo Direto: IA On-Premises vs. IA em Nuvem</h2>
+          
+          <div class="ms-table-container">
+            <table class="ms-table">
+              <thead>
+                <tr>
+                  <th>Critério</th>
+                  <th>IA Local (Ollama On-Premises)</th>
+                  <th>IA Nuvem Pública (APIs SaaS)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Privacidade &amp; LGPD</strong></td>
+                  <td><span class="ms-table-badge-good">100% On-Premises</span><br /><small>Nenhum dado sai da rede interna</small></td>
+                  <td><span class="ms-table-badge-warn">Compartilhado</span><br /><small>Enviado a datacenters externos</small></td>
+                </tr>
+                <tr>
+                  <td><strong>Custo Operacional</strong></td>
+                  <td><span class="ms-table-badge-good">Custo Fixo Previsível</span><br /><small>Sem cobrança por token ou chamadas</small></td>
+                  <td><span class="ms-table-badge-warn">Custo Variável</span><br /><small>Paga por cada pergunta e resposta</small></td>
+                </tr>
+                <tr>
+                  <td><strong>Dependência de Internet</strong></td>
+                  <td><span class="ms-table-badge-good">Zero Dependência</span><br /><small>Funciona mesmo sem internet externa</small></td>
+                  <td><span class="ms-table-badge-warn">Dependência Total</span><br /><small>Paradas na internet bloqueiam o uso</small></td>
+                </tr>
+                <tr>
+                  <td><strong>Conhecimento Interno (RAG)</strong></td>
+                  <td><span class="ms-table-badge-good">Indexação Privada</span><br /><small>Lê manuais e PDFs internos em sandbox</small></td>
+                  <td><span class="ms-table-badge-warn">Upload em Nuvem</span><br /><small>Documentos inteiros enviados a servidores de fora</small></td>
+                </tr>
+                <tr>
+                  <td><strong>Segurança Perimetral</strong></td>
+                  <td><span class="ms-table-badge-good">Blindagem por Firewall</span><br /><small>Regras OPNSense isolam a máquina de IA</small></td>
+                  <td><span class="ms-table-badge-warn">Porta Aberta</span><br /><small>Requer tráfego constante para a nuvem</small></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Modelos em Avaliação no Laboratório Nodigital</h2>
+          <p>
+            Em nosso laboratório de tecnologia, acompanhamos e testamos rigorosamente as novidades semanais do universo open-source para identificar o melhor modelo para cada aplicação:
+          </p>
+
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin: 24px 0;">
+            <div style="background:var(--ms-bg-subtle); padding:20px; border-radius:var(--radius-xs); border-left:3px solid #0067B8;">
+              <h4 style="margin:0 0 6px 0; color:var(--ms-text-primary); font-size:1.1rem;">DeepSeek-R1 / V3</h4>
+              <p style="font-size:0.88rem; color:var(--ms-text-secondary); margin:0; line-height:1.5;">
+                Excelente capacidade de raciocínio profundo, interpretação de código, geração de documentação técnica e resolução lógica complexa.
+              </p>
+            </div>
+            <div style="background:var(--ms-bg-subtle); padding:20px; border-radius:var(--radius-xs); border-left:3px solid #107C41;">
+              <h4 style="margin:0 0 6px 0; color:var(--ms-text-primary); font-size:1.1rem;">Meta Llama 3.3</h4>
+              <p style="font-size:0.88rem; color:var(--ms-text-secondary); margin:0; line-height:1.5;">
+                Domínio nativo e fluente do português brasileiro, perfeito para redação de e-mails corporativos, síntese de documentos e atendimento.
+              </p>
+            </div>
+            <div style="background:var(--ms-bg-subtle); padding:20px; border-radius:var(--radius-xs); border-left:3px solid #5C2D91;">
+              <h4 style="margin:0 0 6px 0; color:var(--ms-text-primary); font-size:1.1rem;">Qwen 2.5 &amp; Mistral</h4>
+              <p style="font-size:0.88rem; color:var(--ms-text-secondary); margin:0; line-height:1.5;">
+                Modelos ultraleves e extremamente velozes, com baixo consumo de memória, ideais para triagens automáticas e classificação de dados.
+              </p>
+            </div>
+            <div style="background:var(--ms-bg-subtle); padding:20px; border-radius:var(--radius-xs); border-left:3px solid #D83B01;">
+              <h4 style="margin:0 0 6px 0; color:var(--ms-text-primary); font-size:1.1rem;">BGE / Nomic Embeddings</h4>
+              <p style="font-size:0.88rem; color:var(--ms-text-secondary); margin:0; line-height:1.5;">
+                Modelos de vetorização local para estruturar buscas semânticas em bases de conhecimento sem expor textos inteiros.
+              </p>
+            </div>
+          </div>
+
+          <h2>Casos de Uso Corporativo Testados</h2>
+          <ul style="padding-left: 20px; line-height: 1.8; color: #334155; font-size: 1rem;">
+            <li><strong>Base de Conhecimento RAG Local:</strong> Pesquisa e consulta em milhares de páginas de manuais de produtos, regulamentos internos e normas sem enviar nenhum documento para a internet.</li>
+            <li><strong>Assistente de Service Desk &amp; Helpdesk:</strong> Triagem automatizada de chamados e sugestão rápida de procedimentos padrão para a equipe de suporte.</li>
+            <li><strong>Auditoria de Código e Automação de Scripts:</strong> Análise de conformidade e geração de automações em PowerShell, Python e Bash com total sigilo dos repositórios da empresa.</li>
+            <li><strong>Resumo e Extração de Documentos Fiscais / Contábeis:</strong> Síntese de contratos e balancetes mantendo o sigilo financeiro da organização.</li>
+          </ul>
+
+          <h2>Como a Nodigital Apoia sua Empresa</h2>
+          <p>
+            Como ainda é uma tecnologia em constante amadurecimento, nosso papel é ser o parceiro técnico que orienta sua empresa de forma realista, evitando investimentos desnecessários e garantindo que você esteja preparado para as oportunidades reais.
+          </p>
+          <p>
+            Se a sua empresa deseja estruturar um ambiente de testes, avaliar o hardware necessário ou entender a viabilidade de um assistente interno de IA, entre em contato com nossos especialistas.
+          </p>
+
+          <div style="margin-top: 36px; padding: 32px; background: linear-gradient(135deg, #004578 0%, #0067B8 100%); border-radius: var(--radius-sm); color: #FFFFFF; text-align: center;">
+            <h3 style="color: #FFFFFF; font-size: 1.6rem; margin: 0 0 12px 0;">Deseja Avaliar a Viabilidade de IA na sua Empresa?</h3>
+            <p style="color: #EBF3FC; font-size: 1.05rem; max-width: 600px; margin: 0 auto 24px; line-height: 1.5;">
+              Agende uma conversa técnica com nosso time de engenharia para entender requisitos de hardware, segurança perimetral e provas de conceito (PoC).
+            </p>
+            <a href="index.html#contato" class="ms-btn ms-btn--primary ms-btn--lg open-contact-modal" style="background: #FFFFFF; color: #004578; font-weight: 700; border: none;">
+              Falar com Nossos Especialistas
+            </a>
+          </div>
+
+        </article>
+
+        <!-- Sticky Sidebar Column -->
+        <aside>
+          <div class="ms-sidebar-card">
+            <h3 class="ms-sidebar-card__title">Resumo do Laboratório</h3>
+            <ul style="list-style: none; padding: 0; margin: 0 0 24px 0; display: flex; flex-direction: column; gap: 14px; font-size: 0.88rem; color: var(--ms-text-secondary);">
+              <li style="display: flex; gap: 10px; align-items: flex-start;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#107C41" stroke-width="2.5" style="flex-shrink:0; margin-top:2px;">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span><strong>Inferência 100% On-Premises:</strong> Nenhum dado trafega fora da sua rede local.</span>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#107C41" stroke-width="2.5" style="flex-shrink:0; margin-top:2px;">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span><strong>Conformidade com LGPD:</strong> Total aderência às normas de privacidade de dados.</span>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#107C41" stroke-width="2.5" style="flex-shrink:0; margin-top:2px;">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span><strong>Custo Fixo &amp; Previsível:</strong> Sem surpresas na fatura mensal por consumo de tokens.</span>
+              </li>
+              <li style="display: flex; gap: 10px; align-items: flex-start;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#107C41" stroke-width="2.5" style="flex-shrink:0; margin-top:2px;">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span><strong>Isolamento por Firewall:</strong> Bloqueio seguro de saída via OPNSense UTM.</span>
+              </li>
+            </ul>
+
+            <a href="https://api.whatsapp.com/send?phone=5511999999999&amp;text=Ol%C3%A1,%20gostaria%20de%20conversar%20sobre%20o%20laborat%C3%B3rio%20de%20IA%20e%20Ollama%20da%20Nodigital"
+              target="_blank" rel="noopener noreferrer" class="ms-btn ms-btn--primary" style="width: 100%; text-align: center; margin-bottom: 12px; display: block;">
+              Conversar no WhatsApp
+            </a>
+
+            <a href="index.html#calculadora" class="ms-btn ms-btn--secondary" style="width: 100%; text-align: center; display: block;">
+              Simular Custo de Infraestrutura
+            </a>
+
+            <hr style="border: 0; border-top: 1px solid var(--ms-border-subtle); margin: 24px 0;" />
+
+            <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 12px; color: var(--ms-text-primary);">Soluções Relacionadas:</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+              <li><a href="index.html#solucoes" style="color: var(--ms-blue-primary); text-decoration: none;">&rsaquo; Virtualização com Proxmox VE</a></li>
+              <li><a href="index.html#solucoes" style="color: var(--ms-blue-primary); text-decoration: none;">&rsaquo; Segurança de Borda com OPNSense</a></li>
+              <li><a href="index.html#solucoes" style="color: var(--ms-blue-primary); text-decoration: none;">&rsaquo; Servidores Windows &amp; Linux</a></li>
+              <li><a href="index.html#solucoes" style="color: var(--ms-blue-primary); text-decoration: none;">&rsaquo; Backup Nuvem Imutável</a></li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       CONTACT MODAL
+       ========================================================================== -->
+  <div class="ms-modal" id="contact-modal" aria-hidden="true" role="dialog">
+    <div class="ms-modal__dialog">
+      <div class="ms-modal__header">
+        <h3 class="ms-modal__title">Solicitar Contato / Consultoria em IA</h3>
+        <button class="ms-modal__close" data-close-modal aria-label="Fechar modal">&times;</button>
+      </div>
+      <div class="ms-modal__body">
+        <form id="msp-contact-form">
+          <div class="ms-form-group">
+            <label for="form-name" class="ms-form-label">Seu Nome Completo</label>
+            <input type="text" id="form-name" class="ms-form-input" placeholder="Ex: Carlos Silva" required />
+          </div>
+
+          <div class="ms-form-group">
+            <label for="form-company" class="ms-form-label">Nome da Empresa</label>
+            <input type="text" id="form-company" class="ms-form-input" placeholder="Ex: Silva &amp; Associados" required />
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+            <div class="ms-form-group">
+              <label for="form-email" class="ms-form-label">E-mail Corporativo</label>
+              <input type="email" id="form-email" class="ms-form-input" placeholder="carlos@empresa.com.br" required />
+            </div>
+            <div class="ms-form-group">
+              <label for="form-phone" class="ms-form-label">WhatsApp / Telefone</label>
+              <input type="tel" id="form-phone" class="ms-form-input" placeholder="(11) 99999-9999" required />
+            </div>
+          </div>
+
+          <div class="ms-form-group">
+            <label for="form-service" class="ms-form-label">Principal Interesse</label>
+            <select id="form-service" class="ms-form-select">
+              <option value="Desenvolvimento com IA" selected>Consultoria / Laboratório de IA Local (Ollama)</option>
+              <option value="MSP Completo">Terceirização Completa de TI (MSP)</option>
+              <option value="Proxmox e Virtualizacao">Virtualização com Proxmox VE &amp; Servidores</option>
+              <option value="Firewall OPNSense">Segurança de Rede com OPNSense UTM</option>
+              <option value="Backup e Ciberseguranca">Backup Imutável &amp; Cibersegurança</option>
+            </select>
+          </div>
+
+          <div class="ms-form-group">
+            <label for="form-notes" class="ms-form-label">Detalhes da Demanda</label>
+            <textarea id="form-notes" class="ms-form-textarea" rows="4"
+              placeholder="Descreva brevemente sua infraestrutura ou interesse em IA local..."></textarea>
+          </div>
+
+          <button type="submit" class="ms-btn ms-btn--primary ms-btn--lg" style="width:100%;">
+            Enviar e Iniciar Conversa Técnica
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CORPORATE FOOTER (Estilo Microsoft Corporate Footer)
+       ========================================================================== -->
+  <footer class="ms-footer">
+    <div class="ms-container">
+      <div class="ms-footer__grid">
+
+        <div>
+          <h4 class="ms-footer__col-title">Soluções MSP</h4>
+          <ul class="ms-footer__list">
+            <li><a href="index.html#solucoes" class="ms-footer__link">Virtualização Proxmox VE</a></li>
+            <li><a href="index.html#solucoes" class="ms-footer__link">Windows Server &amp; AD DS</a></li>
+            <li><a href="index.html#solucoes" class="ms-footer__link">Linux Corporativo &amp; Samba</a></li>
+            <li><a href="index.html#solucoes" class="ms-footer__link">Helpdesk &amp; Service Desk</a></li>
+            <li><a href="index.html#solucoes" class="ms-footer__link">NOC e Monitoramento 24/7</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="ms-footer__col-title">Redes &amp; Segurança</h4>
+          <ul class="ms-footer__list">
+            <li><a href="index.html#solucoes" class="ms-footer__link">OPNSense UTM Firewall</a></li>
+            <li><a href="index.html#solucoes" class="ms-footer__link">VPN WireGuard &amp; IPsec</a></li>
+            <li><a href="index.html#solucoes" class="ms-footer__link">VLANs &amp; Segmentação</a></li>
+            <li><a href="index.html#solucoes" class="ms-footer__link">Proteção Anti-Ransomware</a></li>
+            <li><a href="index.html#solucoes" class="ms-footer__link">Backup 3-2-1 Imutável</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="ms-footer__col-title">Inovação &amp; IA</h4>
+          <ul class="ms-footer__list">
+            <li><a href="ia-local.html" class="ms-footer__link">Modelos de IA Locais (Ollama)</a></li>
+            <li><a href="ia-local.html" class="ms-footer__link">Testes com DeepSeek &amp; Llama</a></li>
+            <li><a href="ia-local.html" class="ms-footer__link">Soberania de Dados &amp; LGPD</a></li>
+            <li><a href="ia-local.html" class="ms-footer__link">Bases RAG On-Premises</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="ms-footer__col-title">Empresa</h4>
+          <ul class="ms-footer__list">
+            <li><a href="index.html#diferenciais" class="ms-footer__link">Sobre a Nodigital</a></li>
+            <li><a href="index.html#diferenciais" class="ms-footer__link">SLA &amp; Metodologia</a></li>
+            <li><a href="index.html#calculadora" class="ms-footer__link">Simulador de Custos</a></li>
+            <li><a href="index.html#contato" class="ms-footer__link">Contato &amp; Suporte</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="ms-footer__col-title">Atendimento</h4>
+          <ul class="ms-footer__list">
+            <li><a href="index.html#contato" class="ms-footer__link open-contact-modal">Diagnóstico Gratuito</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=5511999999999" target="_blank" rel="noopener noreferrer" class="ms-footer__link">WhatsApp Comercial</a></li>
+            <li><a href="index.html#contato" class="ms-footer__link open-contact-modal">Plantão de Incidentes</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="ms-footer__bottom">
+        <div class="ms-footer__copyright">
+          &copy; 2026 Nodigital Tech Soluções em TI &amp; MSP. Todos os direitos reservados. CNPJ:
+          00.000.000/0001-00.
+        </div>
+        <div class="ms-footer__legal">
+          <a href="#" class="ms-footer__legal-link">Privacidade</a>
+          <a href="#" class="ms-footer__legal-link">Termos de Uso</a>
+          <a href="#" class="ms-footer__legal-link">LGPD</a>
+          <a href="#" class="ms-footer__legal-link">Segurança</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+
+</html>

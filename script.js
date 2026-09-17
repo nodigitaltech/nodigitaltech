@@ -234,43 +234,93 @@ function initCalculator() {
 }
 
 /* ==========================================================================
-   5. MODAL (Contato & Diagnóstico de TI)
+   5. MODAIS (Contato & Modais de Detalhes dos Cards)
    ========================================================================== */
 function initModal() {
-  const modal = document.getElementById('contact-modal');
-  const openButtons = document.querySelectorAll('.open-contact-modal');
-  const closeBtn = document.querySelector('.ms-modal__close');
+  const contactModal = document.getElementById('contact-modal');
+  const openContactButtons = document.querySelectorAll('.open-contact-modal');
+  const allModals = document.querySelectorAll('.ms-modal');
+  const openDetailButtons = document.querySelectorAll('.open-detail-modal');
   const contactForm = document.getElementById('msp-contact-form');
 
-  if (!modal) return;
-
-  const openModal = () => {
-    modal.classList.add('open');
+  const openModal = (m) => {
+    if (!m) return;
+    // Close any other open modal first
+    allModals.forEach(other => other.classList.remove('open'));
+    m.classList.add('open');
     document.body.style.overflow = 'hidden';
   };
 
-  const closeModal = () => {
-    modal.classList.remove('open');
-    document.body.style.overflow = '';
+  const closeModal = (m) => {
+    if (m) {
+      m.classList.remove('open');
+    } else {
+      allModals.forEach(modal => modal.classList.remove('open'));
+    }
+    // Only restore scroll if no modals are open
+    const anyOpen = Array.from(allModals).some(modal => modal.classList.contains('open'));
+    if (!anyOpen) {
+      document.body.style.overflow = '';
+    }
   };
 
-  openButtons.forEach(btn => {
+  // Open contact modal triggers
+  openContactButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      openModal();
+      openModal(contactModal);
     });
   });
 
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
+  // Open detail modals from cards
+  openDetailButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = btn.getAttribute('data-target');
+      const targetModal = document.getElementById(targetId);
+      if (targetModal) {
+        openModal(targetModal);
+      }
+    });
   });
 
+  // Generic close buttons (both .ms-modal__close and [data-close-modal])
+  document.querySelectorAll('.ms-modal__close, [data-close-modal]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const parentModal = btn.closest('.ms-modal');
+      closeModal(parentModal);
+    });
+  });
+
+  // Click outside backdrop to close
+  allModals.forEach(m => {
+    m.addEventListener('click', (e) => {
+      if (e.target === m) closeModal(m);
+    });
+  });
+
+  // Close on ESC
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('open')) {
+    if (e.key === 'Escape') {
       closeModal();
     }
+  });
+
+  // Modal CTA: open contact modal with preselected service
+  document.querySelectorAll('.open-contact-with-service').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const serviceVal = btn.getAttribute('data-service');
+      closeModal();
+      if (contactModal) {
+        const serviceSelect = document.getElementById('form-service');
+        if (serviceSelect && serviceVal) {
+          serviceSelect.value = serviceVal;
+        }
+        openModal(contactModal);
+      }
+    });
   });
 
   if (contactForm) {
