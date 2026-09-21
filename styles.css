@@ -1546,6 +1546,139 @@ button, input, select, textarea {
   color: #94A3B8;
 }
 
+.ms-metric-icon {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   PRICING CARDS (Planos de Suporte Mensal)
+   ========================================================================== */
+.ms-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.ms-pricing-card {
+  background: var(--ms-surface);
+  border: 1px solid var(--ms-border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  padding: 32px 28px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.ms-pricing-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: #D1D5DB;
+}
+
+.ms-pricing-card--featured {
+  border-color: var(--ms-blue-primary);
+  border-width: 2px;
+  box-shadow: 0 4px 16px rgba(0, 103, 184, 0.12);
+}
+
+.ms-pricing-card--featured:hover {
+  border-color: var(--ms-blue-hover);
+  box-shadow: 0 8px 32px rgba(0, 103, 184, 0.18);
+}
+
+.ms-pricing-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ms-blue-primary);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+}
+
+.ms-pricing-card__header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.ms-pricing-card__name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ms-text-primary);
+  margin-bottom: 8px;
+}
+
+.ms-pricing-card__price {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--ms-blue-primary);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.ms-pricing-card__period {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ms-text-muted);
+}
+
+.ms-pricing-card__sub-price {
+  font-size: 0.82rem;
+  color: var(--ms-text-muted);
+  margin-bottom: 4px;
+  margin-top: -2px;
+}
+
+.ms-pricing-card__desc {
+  font-size: 0.88rem;
+  color: var(--ms-text-secondary);
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+.ms-pricing-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  flex-grow: 1;
+}
+
+.ms-pricing-card__features li {
+  font-size: 0.9rem;
+  color: var(--ms-text-secondary);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--ms-border-subtle);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ms-pricing-card__features li::before {
+  content: '✓';
+  color: var(--ms-green);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.ms-pricing-card__features li:last-child {
+  border-bottom: none;
+}
+
+.ms-pricing-card__action {
+  margin-top: auto;
+}
+
 /* ==========================================================================
    MODAL (Contato & Diagnóstico de TI)
    ========================================================================== */

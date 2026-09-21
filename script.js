@@ -327,25 +327,25 @@ function initModal() {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const name = document.getElementById('form-name')?.value || '';
-      const email = document.getElementById('form-email')?.value || '';
       const phone = document.getElementById('form-phone')?.value || '';
       const company = document.getElementById('form-company')?.value || '';
-      const service = document.getElementById('form-service')?.value || 'MSP Completo';
+      const computers = document.getElementById('form-computers')?.value || '';
+      const service = document.getElementById('form-service')?.value || 'Suporte de TI';
       const notes = document.getElementById('form-notes')?.value || '';
 
-      const msg = `*Novo Contato - Nodigital Tech MSP*%0A%0A` +
+      const msg = `*Novo Contato - Nodigital Tecnologia*%0A%0A` +
         `*Nome:* ${encodeURIComponent(name)}%0A` +
         `*Empresa:* ${encodeURIComponent(company)}%0A` +
-        `*E-mail:* ${encodeURIComponent(email)}%0A` +
-        `*Telefone/WhatsApp:* ${encodeURIComponent(phone)}%0A` +
+        `*WhatsApp:* ${encodeURIComponent(phone)}%0A` +
+        `*Computadores:* ${encodeURIComponent(computers)}%0A` +
         `*Interesse:* ${encodeURIComponent(service)}%0A` +
         `*Detalhes:*%0A${encodeURIComponent(notes)}`;
 
       // Open WhatsApp with pre-formatted message
-      const whatsappUrl = `https://api.whatsapp.com/send?phone=5511999999999&text=${msg}`;
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=5511983641085&text=${msg}`;
       window.open(whatsappUrl, '_blank');
 
-      alert('Obrigado pelo contato! Você será direcionado ao atendimento especializado da Nodigital.');
+      alert('Obrigado pelo contato! Você será direcionado ao WhatsApp da Nodigital.');
       closeModal();
       contactForm.reset();
     });
