@@ -1560,6 +1560,7 @@ button, input, select, textarea {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 40px;
+  overflow: visible;
 }
 
 .ms-pricing-card {
@@ -1660,8 +1661,9 @@ button, input, select, textarea {
   padding: 8px 0;
   border-bottom: 1px solid var(--ms-border-subtle);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
+  word-break: break-word;
 }
 
 .ms-pricing-card__features li::before {
@@ -1996,6 +1998,9 @@ button, input, select, textarea {
   .ms-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .ms-pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .ms-quickstrip__grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -2101,8 +2106,35 @@ button, input, select, textarea {
   .ms-hero__meta-text--mobile {
     display: inline !important;
   }
-  .ms-cards-grid {
+  .ms-cards-grid,
+  .ms-pricing-grid {
     grid-template-columns: 1fr;
+  }
+  .ms-pricing-grid {
+    gap: 28px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ms-pricing-card {
+    padding: 28px 22px;
+  }
+  .ms-pricing-card--featured {
+    margin-top: 12px;
+  }
+  .ms-pricing-card__price {
+    font-size: 2.1rem;
+  }
+  .ms-pricing-card__features li {
+    font-size: 0.88rem;
+    padding: 7px 0;
+  }
+  .ms-pricing-card__action .ms-btn {
+    font-size: 0.92rem;
+    padding: 12px 20px;
+  }
+  .ms-section__title {
+    font-size: 1.7rem;
   }
   .ms-quickstrip {
     padding: 24px 0;
@@ -2194,6 +2226,30 @@ button, input, select, textarea {
   .ms-calc-summary {
     padding: 16px;
   }
+  .ms-pricing-grid {
+    max-width: 100%;
+    gap: 24px;
+  }
+  .ms-pricing-card {
+    padding: 24px 18px;
+  }
+  .ms-pricing-card__name {
+    font-size: 1.15rem;
+  }
+  .ms-pricing-card__price {
+    font-size: 1.9rem;
+  }
+  .ms-pricing-card__desc {
+    font-size: 0.84rem;
+  }
+  .ms-pricing-card__features li {
+    font-size: 0.85rem;
+    padding: 6px 0;
+  }
+  .ms-pricing-card__action .ms-btn {
+    font-size: 0.88rem;
+    padding: 11px 16px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -2225,6 +2281,33 @@ button, input, select, textarea {
   }
   .ms-quick-item__subtitle {
     font-size: 0.66rem;
+  }
+  .ms-pricing-card {
+    padding: 20px 14px;
+  }
+  .ms-pricing-card__header {
+    margin-bottom: 16px;
+  }
+  .ms-pricing-card__name {
+    font-size: 1.08rem;
+  }
+  .ms-pricing-card__price {
+    font-size: 1.7rem;
+  }
+  .ms-pricing-card__desc {
+    font-size: 0.8rem;
+  }
+  .ms-pricing-card__features {
+    margin-bottom: 16px;
+  }
+  .ms-pricing-card__features li {
+    font-size: 0.82rem;
+    padding: 5px 0;
+    gap: 6px;
+  }
+  .ms-pricing-card__action .ms-btn {
+    font-size: 0.84rem;
+    padding: 10px 14px;
   }
 }
 
